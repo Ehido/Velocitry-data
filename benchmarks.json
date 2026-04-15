@@ -1,7 +1,13 @@
 {
   "_meta": {
     "last_updated": "2026-04-15",
-    "source_credits": ["TechPowerUp", "PassMark", "Tom's Hardware", "RTings", "PCPartPicker UK"],
+    "source_credits": [
+      "TechPowerUp",
+      "PassMark",
+      "Tom's Hardware",
+      "RTings",
+      "PCPartPicker UK"
+    ],
     "note": "Prices auto-updated daily via GitHub Actions scraper. Performance scores are manually curated aggregates."
   },
   "gpus": [
