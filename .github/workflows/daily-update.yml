@@ -1,0 +1,62 @@
+# .github/workflows/daily-update.yml
+#
+# This file tells GitHub: "Every day at 6am UTC, run the price scraper."
+# GitHub provides a free virtual machine (Ubuntu Linux), installs Python,
+# runs our script, and if anything changed, commits the updated JSON back
+# to the repository automatically.
+#
+# You can also trigger it manually: go to Actions tab → daily-update → Run workflow
+
+name: Daily Price Update
+
+on:
+  # Run automatically every day at 06:00 UTC (7am UK winter, 8am UK summer)
+  schedule:
+    - cron: "0 6 * * *"
+
+  # Also allow manual runs from the GitHub Actions tab (useful for testing)
+  workflow_dispatch:
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest   # GitHub gives us a free Ubuntu machine
+
+    # Give the workflow permission to write back to your repository
+    permissions:
+      contents: write
+
+    steps:
+
+      # Step 1: Download your repository files onto the virtual machine
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # Step 2: Install Python 3.12
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Step 3: Install the Python libraries our scraper needs
+      # (listed in requirements.txt)
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Step 4: Run the scraper — this updates benchmarks.json on the VM
+      - name: Run price scraper
+        run: python scraper.py
+
+      # Step 5: If benchmarks.json changed, commit and push it back to GitHub
+      # The 'if' check means we only commit when there's actually a change —
+      # no empty "no-op" commits cluttering your history
+      - name: Commit updated prices
+        run: |
+          git config user.name  "Velocitry Price Bot"
+          git config user.email "bot@velocitry.io"
+          git add benchmarks.json
+          if git diff --staged --quiet; then
+            echo "No price changes today — nothing to commit."
+          else
+            git commit -m "chore: auto-update prices $(date -u '+%Y-%m-%d')"
+            git push
+          fi
