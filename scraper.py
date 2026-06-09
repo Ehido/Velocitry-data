@@ -48,20 +48,44 @@ HEADERS = {
 # Wait between requests so we don't hammer PCPartPicker
 REQUEST_DELAY_SECONDS = 4
 
+# Retry a failed fetch this many times before giving up, backing off
+# exponentially between attempts (2s, 4s, 8s, …) so a transient network
+# blip or a momentary rate-limit doesn't drop a product for the whole day.
+MAX_FETCH_RETRIES = 4
+RETRY_BACKOFF_BASE_SECONDS = 2
+
 # If a price moves by more than this percentage, flag it in the logs as unusual
 SANITY_CHECK_PCT = 40
 
 
 # ── Helper: fetch a URL safely ───────────────────────────────────────────────
 def fetch(url: str) -> str | None:
-    """Fetch a URL and return the HTML text, or None on failure."""
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=15)
-        response.raise_for_status()
-        return response.text
-    except requests.RequestException as e:
-        log.warning(f"  Request failed for {url}: {e}")
-        return None
+    """
+    Fetch a URL and return the HTML text, or None if it still fails after
+    retrying. Transient errors (network blips, timeouts, 429/5xx responses)
+    are retried up to MAX_FETCH_RETRIES times with exponential backoff.
+    """
+    for attempt in range(1, MAX_FETCH_RETRIES + 1):
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=15)
+            response.raise_for_status()
+            return response.text
+        except requests.RequestException as e:
+            if attempt == MAX_FETCH_RETRIES:
+                log.warning(
+                    f"  Request failed for {url} after {attempt} attempts: {e}"
+                )
+                return None
+
+            backoff = RETRY_BACKOFF_BASE_SECONDS * (2 ** (attempt - 1))
+            log.warning(
+                f"  Request failed for {url} "
+                f"(attempt {attempt}/{MAX_FETCH_RETRIES}): {e} "
+                f"— retrying in {backoff}s"
+            )
+            time.sleep(backoff)
+
+    return None
 
 
 # ── Helper: extract the lowest price from a PCPartPicker search results page ─
