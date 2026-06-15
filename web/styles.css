@@ -33,6 +33,7 @@
   --radius-sm: 12px;
   --shadow:    0 24px 60px -24px rgba(0, 0, 0, 0.8);
   --ease:      cubic-bezier(0.22, 1, 0.36, 1);
+  --display:   'Space Grotesk', 'Inter', sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -73,6 +74,16 @@ body {
   background: radial-gradient(circle, var(--accent-2), transparent 65%);
   opacity: 0.32;
 }
+/* Fine film grain for a premium, less-flat feel (pure SVG, no asset file) */
+.bg-grid::after {
+  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0.035; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll reveal — progressively enhanced; without JS everything stays visible */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
 
 /* ───────────── Header ───────────── */
 .site-header {
@@ -128,7 +139,8 @@ body {
   background: var(--surface);
 }
 .hero-title {
-  font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; font-weight: 900;
+  font-family: var(--display);
+  font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; font-weight: 700;
   letter-spacing: -0.035em; margin-bottom: 22px;
 }
 .grad-text {
@@ -150,6 +162,8 @@ body {
   opacity: 0.7;
 }
 .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; font-family: 'JetBrains Mono', monospace; }
+.modal-title { font-family: var(--display); }
+.brand-text { font-family: var(--display); }
 .stat-label { font-size: 12.5px; color: var(--faint); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
 .stat-value small { font-size: 16px; color: var(--muted); font-weight: 600; }
 

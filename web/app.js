@@ -108,6 +108,7 @@ async function boot() {
   renderHeroStats();
   wireControls();
   render();
+  setupReveal();
 }
 
 // Try a couple of likely locations for the data file.
@@ -150,17 +151,53 @@ function renderHeroStats() {
     ((b.price_perf_ratio || 0) > (a.price_perf_ratio || 0) ? b : a));
 
   const stats = [
-    { value: totalParts, label: 'Parts tracked' },
-    { value: '3', label: 'Categories' },
-    { value: `£${cheapest.price_gbp}`, label: 'Lowest price' },
+    { num: totalParts, label: 'Parts tracked' },
+    { num: 3, label: 'Categories' },
+    { num: cheapest.price_gbp, prefix: '£', label: 'Lowest price' },
     { value: bestValue.name.split(' ').slice(-2).join(' '), label: 'Top value pick', small: true },
   ];
 
-  $('#heroStats').innerHTML = stats.map((s) => `
+  $('#heroStats').innerHTML = stats.map((s) => {
+    const inner = s.num != null
+      ? `<span data-count="${s.num}" data-prefix="${s.prefix || ''}">${s.prefix || ''}0</span>`
+      : (s.small ? `<small>${s.value}</small>` : s.value);
+    return `
     <div class="stat">
-      <div class="stat-value">${s.small ? `<small>${s.value}</small>` : s.value}</div>
+      <div class="stat-value">${inner}</div>
       <div class="stat-label">${s.label}</div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
+
+  // Count-up animation for numeric stats (vanilla — no library)
+  $('#heroStats').querySelectorAll('[data-count]').forEach((el) => {
+    const target = parseFloat(el.dataset.count);
+    const prefix = el.dataset.prefix || '';
+    const start = performance.now();
+    const dur = 1100;
+    const tick = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      el.textContent = prefix + Math.round(target * eased).toLocaleString('en-GB');
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}
+
+// Reveal structural sections as they scroll into view (progressive enhancement)
+function setupReveal() {
+  const targets = document.querySelectorAll('.controls, .site-footer');
+  targets.forEach((el) => el.classList.add('reveal'));
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach((el) => el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  targets.forEach((el) => io.observe(el));
 }
 
 /* ───────────── Controls ───────────── */
