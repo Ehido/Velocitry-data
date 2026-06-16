@@ -1,14 +1,16 @@
 name: Deploy site to GitHub Pages
 
-# Publishes the web/ reference UI to GitHub Pages.
-# The whole repo root is uploaded so the page (at /web/) can read
-# the daily-updated /benchmarks.json alongside it.
+# Publishes the front-end to GitHub Pages.
+# The whole repo root is uploaded so the page can read the
+# daily-updated benchmarks.json sitting alongside it.
 
 on:
   push:
     branches: [main]
     paths:
-      - 'web/**'
+      - 'index.html'
+      - 'styles.css'
+      - 'app.js'
       - 'benchmarks.json'
       - '.github/workflows/deploy-pages.yml'
   # Re-publish after the daily scraper updates prices
@@ -43,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload repo root so web/ and benchmarks.json ship together
+          # Upload repo root so the site and benchmarks.json ship together
           path: '.'
 
       - name: Deploy to GitHub Pages

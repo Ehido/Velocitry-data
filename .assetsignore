@@ -1,0 +1,12 @@
+# Cloudflare Workers serves the repo root, but this repo also holds data
+# tooling that must NOT be published. Exclude everything that isn't the site
+# (index.html, styles.css, app.js, benchmarks.json).
+.git
+.github
+.claude
+.gitignore
+.assetsignore
+wrangler.jsonc
+scraper.py
+requirements.txt
+*.md

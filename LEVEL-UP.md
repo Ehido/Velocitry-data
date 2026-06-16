@@ -103,6 +103,6 @@ Browse these, screenshot what you like, and hand it to me to rebuild on your dat
 5. *(Bigger)* **Tailwind + DaisyUI rebuild** — if you want a utility workflow you
    can extend forever without writing raw CSS.
 
-Pick any number and I'll implement them directly in `web/` and push. Or grab
+Pick any number and I'll implement them directly in the site files and push. Or grab
 an asset from one of the tools above, drop the link/file in chat, and say
 "wire this in" — that's the level-3 workflow in action.

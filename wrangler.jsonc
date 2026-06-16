@@ -1,0 +1,16 @@
+{
+  // Cloudflare Workers config for the Velocitry site (worker: "v8").
+  // This is an assets-only Worker — no server code, just the static
+  // front-end served straight from the repo root so it sits alongside
+  // the daily-updated benchmarks.json.
+  "name": "v8",
+  "compatibility_date": "2026-06-16",
+  "assets": {
+    // Serve the repo root. A .assetsignore file keeps everything except
+    // the site files (index.html, styles.css, app.js, benchmarks.json)
+    // out of the deployment.
+    "directory": ".",
+    // Unknown paths fall back to the app shell (single-page navigation).
+    "not_found_handling": "single-page-application"
+  }
+}
