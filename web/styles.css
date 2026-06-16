@@ -132,6 +132,13 @@ body {
 /* ───────────── Hero ───────────── */
 .hero { padding: 88px 0 56px; }
 .hero-inner { max-width: 760px; }
+/* Staggered entrance on load */
+.eyebrow, .hero-title, .hero-sub, .hero-stats { animation: heroIn 0.9s var(--ease) both; }
+.eyebrow     { animation-delay: 0.05s; }
+.hero-title  { animation-delay: 0.14s; }
+.hero-sub    { animation-delay: 0.26s; }
+.hero-stats  { animation-delay: 0.38s; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(22px); filter: blur(6px); } }
 .eyebrow {
   display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--accent-2); margin-bottom: 22px;
@@ -144,10 +151,18 @@ body {
   letter-spacing: -0.035em; margin-bottom: 22px;
 }
 .grad-text {
-  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  background: linear-gradient(120deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+  background-size: 250% auto;
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 7s linear infinite;
 }
-.grad-text.alt { background: linear-gradient(120deg, var(--accent-3), var(--hot)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-text.alt {
+  background: linear-gradient(120deg, var(--accent-3), var(--hot), var(--gold), var(--accent-3));
+  background-size: 250% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+@keyframes shimmer { to { background-position: 250% center; } }
 .hero-sub { font-size: clamp(16px, 2vw, 19px); color: var(--muted); max-width: 580px; }
 
 .hero-stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
@@ -175,18 +190,22 @@ body {
 .tabs {
   display: inline-flex; padding: 5px; gap: 4px; border-radius: 14px;
   background: var(--surface); border: 1px solid var(--line);
+  position: relative;
+}
+.tab-indicator {
+  position: absolute; top: 5px; bottom: 5px; left: 0; width: 0;
+  border-radius: 10px; z-index: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+  box-shadow: 0 10px 24px -10px var(--accent);
+  transition: left 0.4s var(--ease), width 0.4s var(--ease);
 }
 .tab {
   border: 0; background: transparent; color: var(--muted); cursor: pointer;
   font: inherit; font-weight: 600; font-size: 14px; padding: 9px 20px;
-  border-radius: 10px; transition: all 0.25s var(--ease);
+  border-radius: 10px; transition: color 0.25s var(--ease); position: relative; z-index: 1;
 }
 .tab:hover { color: var(--text); }
-.tab.is-active {
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent), var(--accent-3));
-  box-shadow: 0 10px 24px -10px var(--accent);
-}
+.tab.is-active { color: #fff; }
 
 .controls-right { display: flex; gap: 12px; flex-wrap: wrap; }
 .search {
@@ -214,29 +233,42 @@ body {
 /* ───────────── Board / cards ───────────── */
 .board { display: grid; gap: 14px; padding-bottom: 120px; }
 
+/* Reveal wrapper — staggered as cards scroll into view */
+.card-wrap {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  transition-delay: calc(min(var(--i, 0), 8) * 45ms);
+}
+.card-wrap.in { opacity: 1; transform: none; }
+
 .card {
   position: relative; display: grid;
   grid-template-columns: 56px 1fr auto; gap: 22px; align-items: center;
   padding: 20px 24px; border-radius: var(--radius);
   background: linear-gradient(180deg, var(--surface), var(--bg-2));
   border: 1px solid var(--line);
-  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
-  animation: rise 0.5s var(--ease) both;
+  transform: perspective(1400px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.18s var(--ease), border-color 0.3s, box-shadow 0.3s;
+  will-change: transform;
 }
-.card:hover {
-  transform: translateY(-3px);
-  border-color: var(--line-2);
-  box-shadow: var(--shadow);
+.card:hover { border-color: var(--line-2); box-shadow: var(--shadow); }
+.card > * { position: relative; z-index: 1; }
+/* Cursor spotlight */
+.card::before {
+  content: ''; position: absolute; inset: 0; border-radius: var(--radius); z-index: 0;
+  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), rgba(108, 140, 255, 0.16), transparent 42%);
+  opacity: 0; transition: opacity 0.35s; pointer-events: none;
 }
+.card:hover::before { opacity: 1; }
+/* Gradient border glow */
 .card::after {
-  content: ''; position: absolute; inset: 0; border-radius: var(--radius);
+  content: ''; position: absolute; inset: 0; border-radius: var(--radius); z-index: 2;
   padding: 1px; pointer-events: none; opacity: 0; transition: opacity 0.3s;
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
 }
 .card:hover::after { opacity: 0.55; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 
 /* Rank */
 .rank {
@@ -378,4 +410,16 @@ body {
 @media (max-width: 480px) {
   .hero { padding: 56px 0 40px; }
   .card-name { white-space: normal; }
+}
+
+/* ───────────── Respect reduced-motion ───────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card-wrap { opacity: 1 !important; transform: none !important; }
+  .card { transform: none !important; }
 }

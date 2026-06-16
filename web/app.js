@@ -92,6 +92,7 @@ const CONFIG = {
 
 const $ = (sel) => document.querySelector(sel);
 const keyOf = (it) => `${state.category}:${it.name}`;
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ───────────── Boot ───────────── */
 async function boot() {
@@ -109,6 +110,83 @@ async function boot() {
   wireControls();
   render();
   setupReveal();
+  setupAmbient();
+  setupTilt();
+  moveTabIndicator();
+  window.addEventListener('resize', moveTabIndicator);
+}
+
+/* ───────────── Ambient parallax background ─────────────
+   Slow autonomous drift + subtle mouse parallax on the glows.    */
+function setupAmbient() {
+  if (reduceMotion) return;
+  const g1 = $('.bg-glow--1');
+  const g2 = $('.bg-glow--2');
+  if (!g1 || !g2) return;
+
+  let mx = 0, my = 0;           // smoothed mouse offset (-1..1)
+  let tx = 0, ty = 0;           // target offset
+  window.addEventListener('pointermove', (e) => {
+    tx = (e.clientX / window.innerWidth) * 2 - 1;
+    ty = (e.clientY / window.innerHeight) * 2 - 1;
+  });
+
+  const start = performance.now();
+  const loop = (now) => {
+    const t = (now - start) / 1000;
+    mx += (tx - mx) * 0.05;     // ease toward target
+    my += (ty - my) * 0.05;
+    // base drift via sine waves, plus parallax
+    const d1x = Math.sin(t * 0.25) * 50 + mx * 45;
+    const d1y = Math.cos(t * 0.20) * 40 + my * 45;
+    const d2x = Math.cos(t * 0.18) * 60 - mx * 60;
+    const d2y = Math.sin(t * 0.23) * 50 - my * 60;
+    g1.style.transform = `translate(${d1x}px, ${d1y}px)`;
+    g2.style.transform = `translate(${d2x}px, ${d2y}px)`;
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+}
+
+/* ───────────── 3D tilt + cursor spotlight on cards ───────────── */
+function setupTilt() {
+  if (reduceMotion) return;
+  const board = $('#board');
+  const MAX = 6; // degrees
+
+  board.addEventListener('pointermove', (e) => {
+    const card = e.target.closest('.card');
+    if (!card) return;
+    const r = card.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;   // 0..1
+    const py = (e.clientY - r.top) / r.height;   // 0..1
+    card.style.setProperty('--ry', `${(px - 0.5) * MAX * 2}deg`);
+    card.style.setProperty('--rx', `${(0.5 - py) * MAX * 2}deg`);
+    card.style.setProperty('--mx', `${px * 100}%`);
+    card.style.setProperty('--my', `${py * 100}%`);
+  });
+
+  board.addEventListener('pointerleave', () => {
+    board.querySelectorAll('.card').forEach(resetTilt);
+  });
+  // Reset a card when the pointer leaves it specifically.
+  board.addEventListener('pointerout', (e) => {
+    const card = e.target.closest('.card');
+    if (card && !card.contains(e.relatedTarget)) resetTilt(card);
+  });
+}
+function resetTilt(card) {
+  card.style.setProperty('--rx', '0deg');
+  card.style.setProperty('--ry', '0deg');
+}
+
+/* ───────────── Sliding tab indicator ───────────── */
+function moveTabIndicator() {
+  const ind = $('#tabIndicator');
+  const active = document.querySelector('#tabs .tab.is-active');
+  if (!ind || !active) return;
+  ind.style.left = active.offsetLeft + 'px';
+  ind.style.width = active.offsetWidth + 'px';
 }
 
 // Try a couple of likely locations for the data file.
@@ -207,6 +285,7 @@ function wireControls() {
     if (!btn) return;
     $('#tabs').querySelectorAll('.tab').forEach((t) => t.classList.remove('is-active'));
     btn.classList.add('is-active');
+    moveTabIndicator();
     state.category = btn.dataset.cat;
     state.search = '';
     $('#searchInput').value = '';
@@ -286,44 +365,64 @@ function render() {
       .join('');
 
     return `
-    <article class="card${topClass}" style="animation-delay:${i * 35}ms">
-      <div class="rank"><small>RANK</small>${rank}</div>
-      <div class="card-main">
-        <div class="card-brand">${cfg.brandOf(it.name)}</div>
-        <div class="card-name" title="${it.name}">${it.name}</div>
-        <div class="specs">${chips}</div>
-        <div class="perf">
-          <div class="perf-track"><div class="perf-fill" data-pct="${pct}"></div></div>
-          <div class="perf-meta">
-            <span><b>${it[cfg.perfField]}</b> / ${cfg.perfMax} performance</span>
-            <span>${cfg.perfHint(it)}</span>
+    <div class="card-wrap" style="--i:${i}">
+      <article class="card${topClass}">
+        <div class="rank"><small>RANK</small>${rank}</div>
+        <div class="card-main">
+          <div class="card-brand">${cfg.brandOf(it.name)}</div>
+          <div class="card-name" title="${it.name}">${it.name}</div>
+          <div class="specs">${chips}</div>
+          <div class="perf">
+            <div class="perf-track"><div class="perf-fill" data-pct="${pct}"></div></div>
+            <div class="perf-meta">
+              <span><b>${it[cfg.perfField]}</b> / ${cfg.perfMax} performance</span>
+              <span>${cfg.perfHint(it)}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card-side">
-        <div class="price"><span>£</span>${formatPrice(it.price_gbp)}</div>
-        ${it.pp_label ? `<span class="value-badge ${it.pp_label}">${it.pp_label} value</span>` : ''}
-        <div class="card-actions">
-          ${it.tier != null ? `<span class="tier-pill">Tier ${it.tier}</span>` : ''}
-          <button class="compare-toggle${inCompare ? ' active' : ''}" data-key="${keyOf(it)}">
-            ${inCompare ? '✓ Added' : '+ Compare'}
-          </button>
+        <div class="card-side">
+          <div class="price"><span>£</span>${formatPrice(it.price_gbp)}</div>
+          ${it.pp_label ? `<span class="value-badge ${it.pp_label}">${it.pp_label} value</span>` : ''}
+          <div class="card-actions">
+            ${it.tier != null ? `<span class="tier-pill">Tier ${it.tier}</span>` : ''}
+            <button class="compare-toggle${inCompare ? ' active' : ''}" data-key="${keyOf(it)}">
+              ${inCompare ? '✓ Added' : '+ Compare'}
+            </button>
+          </div>
         </div>
-      </div>
-    </article>`;
+      </article>
+    </div>`;
   }).join('');
 
-  // Animate perf bars after paint.
-  requestAnimationFrame(() => {
-    board.querySelectorAll('.perf-fill').forEach((el) => {
-      el.style.width = el.dataset.pct + '%';
-    });
-  });
+  revealCards(board);
 
   // Wire compare toggles.
   board.querySelectorAll('.compare-toggle').forEach((btn) => {
     btn.addEventListener('click', () => toggleCompare(btn.dataset.key));
   });
+}
+
+// Stagger each card in as it scrolls into view, filling its perf bar on entry.
+let cardObserver;
+function revealCards(board) {
+  const wraps = board.querySelectorAll('.card-wrap');
+  const reveal = (wrap) => {
+    wrap.classList.add('in');
+    const bar = wrap.querySelector('.perf-fill');
+    if (bar) bar.style.width = bar.dataset.pct + '%';
+  };
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    wraps.forEach(reveal);
+    return;
+  }
+  if (cardObserver) cardObserver.disconnect();
+  cardObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { reveal(e.target); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  wraps.forEach((w) => cardObserver.observe(w));
 }
 
 function formatPrice(n) {
