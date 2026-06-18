@@ -1,0 +1,21 @@
+// Cloudflare Workers — static asset configuration for velocitry.app
+//
+// The site has no build step: Cloudflare simply serves the files in this
+// repository. This file tells Cloudflare exactly that, so its Git-connected
+// deploys ("Workers Builds") succeed instead of failing for lack of config.
+//
+// - "name" must match the existing Worker service ("v8") so deploys land on
+//   the live site rather than creating a new one.
+// - "assets.directory" is the repository ROOT ("."), which preserves today's
+//   layout: the UI lives at /web/ and the data files (benchmarks.json,
+//   issues.json) sit at the root — exactly where web/app.js and
+//   web/issues.html fetch them from.
+//
+// There is no "main" script: this is a static-assets-only Worker.
+{
+  "name": "v8",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "."
+  }
+}
