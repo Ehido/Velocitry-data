@@ -1,0 +1,54 @@
+# .github/workflows/issues-update.yml
+#
+# "Scour the world for PC / software problems, find the commonalities, and
+#  report back — repeatedly."
+#
+# This runs the Issue Radar on a schedule. GitHub gives us a free Ubuntu
+# machine with open internet access (unlike a sandbox), runs the scraper,
+# and commits the refreshed issues.json + ISSUES-REPORT.md back to the repo
+# whenever something changed — so the report keeps updating itself.
+
+name: Issue Radar Update
+
+on:
+  # Twice a week (Mon & Thu, 07:00 UTC). Issue trends move slower than prices,
+  # so we don't need it daily — adjust the cron if you want it more often.
+  schedule:
+    - cron: "0 7 * * 1,4"
+
+  # Allow manual runs from the Actions tab (handy for the first run / testing).
+  workflow_dispatch:
+
+jobs:
+  update-issues:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed to commit the refreshed report back
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the Issue Radar
+        run: python issue_scraper.py
+
+      - name: Commit refreshed report
+        run: |
+          git config user.name  "Velocitry Issue Bot"
+          git config user.email "bot@velocitry.io"
+          git add issues.json ISSUES-REPORT.md
+          if git diff --staged --quiet; then
+            echo "No changes in the issue report today — nothing to commit."
+          else
+            git commit -m "chore: refresh issue radar $(date -u '+%Y-%m-%d')"
+            git push
+          fi
