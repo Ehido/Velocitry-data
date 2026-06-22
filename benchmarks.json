@@ -8,7 +8,7 @@
       "RTings",
       "PCPartPicker UK"
     ],
-    "note": "Prices auto-updated daily via GitHub Actions scraper. Performance scores are manually curated aggregates."
+    "note": "Prices and performance scores are manually curated aggregates."
   },
   "gpus": [
     {
