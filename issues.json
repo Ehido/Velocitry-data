@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "last_updated": "2026-06-18",
+    "run_count": 0,
+    "total_signals": 866,
+    "sources_polled": [],
+    "note": "PREVIEW SEED — illustrative figures so the site renders before the first scheduled scrape. The Issue Radar GitHub Action replaces this automatically with live mention counts and real, linked example posts.",
+    "preview": true
+  },
+  "themes": [
+    {
+      "id": "performance-slow",
+      "label": "Slow / sluggish performance",
+      "severity": "medium",
+      "mentions": 142,
+      "share_pct": 16.4,
+      "trend": "→",
+      "top_keywords": ["slow", "lag", "stutter", "disk", "fps", "freezing"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Lightweight performance auditor that finds the real bottleneck (disk, thermals, background apps, drivers).",
+        "solution_type": "software",
+        "suggested_price_gbp": "Free scan + £6/mo monitoring",
+        "opportunity": "Crowded with junk 'cleaners'; room for an honest, no-bloat tool."
+      }
+    },
+    {
+      "id": "bluescreen-crash",
+      "label": "Crashes, BSODs & freezes",
+      "severity": "high",
+      "mentions": 118,
+      "share_pct": 13.6,
+      "trend": "→",
+      "top_keywords": ["crash", "bsod", "restart", "freeze", "stop", "kernel"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Crash-dump / minidump analyser that translates stop codes into plain-English causes and a fix checklist.",
+        "solution_type": "software",
+        "suggested_price_gbp": "£5/mo or £39 lifetime",
+        "opportunity": "Stop codes are cryptic; users want a translation, not a forum."
+      }
+    },
+    {
+      "id": "boot-failure",
+      "label": "PC won't boot / startup failures",
+      "severity": "high",
+      "mentions": 97,
+      "share_pct": 11.2,
+      "trend": "→",
+      "top_keywords": ["boot", "display", "screen", "post", "signal", "bios"],
+      "examples": [],
+      "recommendation": {
+        "summary": "A guided, step-by-step boot-diagnostic walkthrough that rules out PSU, RAM, GPU and display issues in order.",
+        "solution_type": "software / guided tool",
+        "suggested_price_gbp": "Free tier + £9 one-off deep diagnostic",
+        "opportunity": "High volume, high anxiety, poorly served by scattered forum posts."
+      }
+    },
+    {
+      "id": "network-wifi",
+      "label": "Wi-Fi, network & connectivity",
+      "severity": "medium",
+      "mentions": 89,
+      "share_pct": 10.3,
+      "trend": "→",
+      "top_keywords": ["wifi", "router", "connect", "dns", "ping", "vpn"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Connection doctor that pinpoints whether the fault is the device, the router, the ISP or DNS — and what to do next.",
+        "solution_type": "software",
+        "suggested_price_gbp": "Free + £4/mo for continuous monitoring",
+        "opportunity": "Users can't tell whose fault it is; clarity is the product."
+      }
+    },
+    {
+      "id": "updates-drivers",
+      "label": "Updates, drivers & install failures",
+      "severity": "medium",
+      "mentions": 81,
+      "share_pct": 9.4,
+      "trend": "→",
+      "top_keywords": ["driver", "update", "install", "error", "code", "rollback"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Driver & update fixer that resolves failed installs and matches the correct driver versions automatically.",
+        "solution_type": "software",
+        "suggested_price_gbp": "£5/mo",
+        "opportunity": "Existing 'driver updater' tools are notoriously scammy."
+      }
+    },
+    {
+      "id": "malware-security",
+      "label": "Malware, viruses & account security",
+      "severity": "high",
+      "mentions": 76,
+      "share_pct": 8.8,
+      "trend": "→",
+      "top_keywords": ["virus", "malware", "popups", "hacked", "scam", "phishing"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Second-opinion malware scanner + breach checker with clear remediation steps, without the upsell.",
+        "solution_type": "software / service",
+        "suggested_price_gbp": "£7/mo",
+        "opportunity": "Trust gap in the AV market — a transparent tool stands out."
+      }
+    },
+    {
+      "id": "storage-data-loss",
+      "label": "Storage failures & data loss",
+      "severity": "high",
+      "mentions": 64,
+      "share_pct": 7.4,
+      "trend": "→",
+      "top_keywords": ["recover", "corrupted", "deleted", "drive", "backup", "ssd"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Automated backup + guided recovery with health alerts before a drive actually dies.",
+        "solution_type": "software / service",
+        "suggested_price_gbp": "£8/mo incl. cloud backup",
+        "opportunity": "Pain is severe and emotional; people pay to avoid losing data."
+      }
+    },
+    {
+      "id": "app-bugs",
+      "label": "App bugs, errors & licensing",
+      "severity": "medium",
+      "mentions": 58,
+      "share_pct": 6.7,
+      "trend": "→",
+      "top_keywords": ["error", "crash", "login", "activation", "bug", "subscription"],
+      "examples": [],
+      "recommendation": {
+        "summary": "An issue-aware help layer that detects the exact app + error and serves a verified fix instead of a search rabbit hole.",
+        "solution_type": "software",
+        "suggested_price_gbp": "£4/mo",
+        "opportunity": "Maps directly onto Velocitry's aggregation engine."
+      }
+    },
+    {
+      "id": "overheating-hardware",
+      "label": "Overheating & hardware health",
+      "severity": "medium",
+      "mentions": 47,
+      "share_pct": 5.4,
+      "trend": "→",
+      "top_keywords": ["overheating", "temps", "fan", "thermal", "loud", "shutdown"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Thermal monitor with plain-language alerts and a maintenance schedule (repaste, dust, fan curves).",
+        "solution_type": "software",
+        "suggested_price_gbp": "£4/mo",
+        "opportunity": "Preventative angle — sell peace of mind, not panic."
+      }
+    },
+    {
+      "id": "peripherals-display",
+      "label": "Peripherals, audio & display",
+      "severity": "low",
+      "mentions": 39,
+      "share_pct": 4.5,
+      "trend": "→",
+      "top_keywords": ["audio", "monitor", "mic", "usb", "webcam", "keyboard"],
+      "examples": [],
+      "recommendation": {
+        "summary": "Plug-and-play peripheral troubleshooter that checks drivers, ports and OS audio/video routing.",
+        "solution_type": "software",
+        "suggested_price_gbp": "Free + £3/mo",
+        "opportunity": "Quick wins; great low-friction entry product."
+      }
+    }
+  ],
+  "trending_keywords": [
+    ["slow", 64], ["crash", 58], ["boot", 41], ["wifi", 39], ["driver", 37],
+    ["update", 34], ["screen", 31], ["error", 29], ["freeze", 27], ["recover", 24],
+    ["overheating", 22], ["audio", 21], ["virus", 19], ["popups", 18], ["fan", 17]
+  ]
+}
