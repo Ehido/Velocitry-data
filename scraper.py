@@ -14,11 +14,13 @@ How it works:
 6. Save the updated benchmarks.json back to disk
 """
 
+import os
+import sys
 import json
 import time
 import re
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 
 import requests
 from bs4 import BeautifulSoup
@@ -50,6 +52,8 @@ REQUEST_DELAY_SECONDS = 4
 
 # If a price moves by more than this percentage, flag it in the logs as unusual
 SANITY_CHECK_PCT = 40
+
+STALE_FAIL_DAYS = int(os.environ.get("STALE_FAIL_DAYS", "3"))
 
 
 # ── Helper: fetch a URL safely ───────────────────────────────────────────────
@@ -112,8 +116,29 @@ def extract_price(html: str) -> float | None:
     return min(prices) if prices else None
 
 
+def days_since_last_change(meta: dict, today: date) -> int:
+    """Return whole days between meta['last_price_change'] and today, or 0 if unknown."""
+    raw = meta.get("last_price_change")
+    if not raw:
+        return 0
+    try:
+        last = datetime.strptime(raw, "%Y-%m-%d").date()
+    except (ValueError, TypeError):
+        return 0
+    return (today - last).days
+
+
+def apply_staleness_guard(data: dict, updated_count: int, today: date, threshold: int) -> tuple[int, bool]:
+    """Record the last real price change and report whether the data has gone stale."""
+    meta = data.setdefault("_meta", {})
+    if updated_count > 0 or "last_price_change" not in meta:
+        meta["last_price_change"] = today.isoformat()
+    stale_days = days_since_last_change(meta, today)
+    return stale_days, stale_days >= threshold
+
+
 # ── Main update function ─────────────────────────────────────────────────────
-def update_prices() -> None:
+def update_prices() -> bool:
     # Load current benchmarks.json
     log.info(f"Loading {BENCHMARKS_FILE}")
     with open(BENCHMARKS_FILE, "r", encoding="utf-8") as f:
@@ -193,7 +218,10 @@ def update_prices() -> None:
             time.sleep(REQUEST_DELAY_SECONDS)
 
     # Update the timestamp
-    data["_meta"]["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).date()
+    data["_meta"]["last_updated"] = today.isoformat()
+
+    stale_days, is_stale = apply_staleness_guard(data, updated_count, today, STALE_FAIL_DAYS)
 
     # Save back to disk
     log.info(f"\nSaving {BENCHMARKS_FILE}")
@@ -206,7 +234,16 @@ def update_prices() -> None:
         f"Failed: {failed_count}"
     )
 
+    if is_stale:
+        log.error(
+            f"No price changes for {stale_days} day(s) "
+            f"(threshold {STALE_FAIL_DAYS}) — scraper may be broken. Failing the run."
+        )
+
+    return not is_stale
+
 
 # ── Entry point ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    update_prices()
+    ok = update_prices()
+    sys.exit(0 if ok else 1)
