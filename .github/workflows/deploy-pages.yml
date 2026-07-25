@@ -29,6 +29,11 @@ concurrency:
 
 jobs:
   deploy:
+    # 'completed' fires for failed runs too, so without this guard a scraper
+    # failure still republished the site.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

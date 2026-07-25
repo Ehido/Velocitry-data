@@ -307,8 +307,12 @@ def update_prices() -> None:
     # date when prices were actually confirmed against the source.
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     meta = data["_meta"]
-    meta["last_run"] = today
-    if updated_count or unchanged_count:
+    verified_anything = bool(updated_count or unchanged_count)
+    # NOTE: deliberately NOT writing a per-run timestamp into the committed file.
+    # Doing so changed the file every day even when zero prices were fetched, so
+    # the Action committed and republished daily forever, and the site looked
+    # freshly updated when nothing had happened. Run time belongs in the log.
+    if verified_anything:
         meta["prices_verified"] = today
         meta["price_source_ok"] = True
     else:
@@ -322,10 +326,19 @@ def update_prices() -> None:
     # not "a script ran".
     meta["last_updated"] = meta.get("prices_verified", meta.get("last_updated"))
 
-    # Save back to disk
-    log.info(f"\nSaving {BENCHMARKS_FILE}")
-    with open(BENCHMARKS_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    # Save back to disk only when something was actually verified. If the price
+    # source is down, leaving the file byte-identical means the daily Action
+    # produces no commit and no deploy - silence is the correct signal.
+    if verified_anything:
+        log.info(f"\nSaving {BENCHMARKS_FILE}")
+        with open(BENCHMARKS_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    else:
+        log.error(
+            "\nNOT saving %s - no price was verified this run, so there is nothing "
+            "to publish. The file is unchanged and the Action should produce no commit.",
+            BENCHMARKS_FILE,
+        )
 
     log.info(
         f"\nDone! Updated: {updated_count}  |  "
