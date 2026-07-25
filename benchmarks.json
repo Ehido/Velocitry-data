@@ -10,7 +10,7 @@
       "Intel ARK",
       "AMD Product Specs"
     ],
-    "note": "Specs are sourced from manufacturer datasheets and public benchmark databases. Performance scores are relative and modelled for comparison; FPS figures are modelled estimates, not measurements. PRICES ARE INDICATIVE and were last verified on the prices_verified date - the automated price feed is currently offline, so treat prices as a guide and check the retailer. Parts marked legacy are discontinued and carry a hand-maintained used-market estimate.",
+    "note": "Specs are sourced from manufacturer datasheets and public benchmark databases. Performance scores are relative and modelled for comparison; FPS figures are modelled estimates, not measurements. availability is one of new / used_only / not_sold_separately; price_is_estimate marks prices that are hand-maintained guesses rather than fetched (the automated price feed is currently offline). Value ratings are calculated within an availability group, so 'Excellent' among new parts and among used parts are separate judgements.",
     "counts": {
       "gpus": 161,
       "cpus": 144,
@@ -39,7 +39,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5090",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 4090",
@@ -59,7 +61,9 @@
       "year": 2022,
       "pcpartpicker_search": "RTX 4090",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5080",
@@ -79,7 +83,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5080",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 4080 Super",
@@ -99,7 +105,9 @@
       "year": 2024,
       "pcpartpicker_search": "RTX 4080 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4080",
@@ -119,7 +127,9 @@
       "year": 2022,
       "pcpartpicker_search": "RTX 4080",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5070 Ti",
@@ -139,7 +149,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5070 Ti",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Radeon RX 7900 XTX",
@@ -159,7 +171,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 7900 XTX",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 9070 XT",
@@ -179,7 +193,9 @@
       "year": 2025,
       "pcpartpicker_search": "RX 9070 XT",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 4070 Ti Super",
@@ -199,7 +215,9 @@
       "year": 2024,
       "pcpartpicker_search": "RTX 4070 Ti Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5090 Laptop",
@@ -208,7 +226,7 @@
       "performance_score": 67.9,
       "price_gbp": 620,
       "price_perf_ratio": 11.0,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 8.2,
       "arch": "Blackwell",
       "tdp": 175,
@@ -219,7 +237,9 @@
       "year": 2025,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 7900 XT",
@@ -239,7 +259,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 7900 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 9070",
@@ -248,7 +270,7 @@
       "performance_score": 66.3,
       "price_gbp": 529,
       "price_perf_ratio": 12.5,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 8.1,
       "arch": "RDNA 4",
       "tdp": 220,
@@ -259,7 +281,9 @@
       "year": 2025,
       "pcpartpicker_search": "RX 9070",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 4070 Ti",
@@ -279,7 +303,9 @@
       "year": 2023,
       "pcpartpicker_search": "RTX 4070 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4070 Super",
@@ -299,7 +325,9 @@
       "year": 2024,
       "pcpartpicker_search": "RTX 4070 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5070",
@@ -308,7 +336,7 @@
       "performance_score": 63.8,
       "price_gbp": 529,
       "price_perf_ratio": 12.1,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 8.0,
       "arch": "Blackwell",
       "tdp": 250,
@@ -319,7 +347,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5070",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 4090 Laptop",
@@ -328,7 +358,7 @@
       "performance_score": 62.9,
       "price_gbp": 480,
       "price_perf_ratio": 13.1,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 7.9,
       "arch": "Ada Lovelace",
       "tdp": 175,
@@ -339,7 +369,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 7900 GRE",
@@ -359,7 +391,9 @@
       "year": 2023,
       "pcpartpicker_search": "RX 7900 GRE",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3090 Ti",
@@ -379,7 +413,9 @@
       "year": 2022,
       "pcpartpicker_search": "RTX 3090 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6950 XT",
@@ -399,7 +435,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 6950 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5080 Laptop",
@@ -408,7 +446,7 @@
       "performance_score": 59.5,
       "price_gbp": 480,
       "price_perf_ratio": 12.4,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 7.7,
       "arch": "Blackwell",
       "tdp": 175,
@@ -419,7 +457,9 @@
       "year": 2025,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3090",
@@ -439,7 +479,9 @@
       "year": 2020,
       "pcpartpicker_search": "RTX 3090",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4070",
@@ -459,7 +501,9 @@
       "year": 2023,
       "pcpartpicker_search": "RTX 4070",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 7800 XT",
@@ -479,7 +523,9 @@
       "year": 2023,
       "pcpartpicker_search": "RX 7800 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3080 Ti",
@@ -499,7 +545,9 @@
       "year": 2021,
       "pcpartpicker_search": "RTX 3080 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6900 XT",
@@ -519,7 +567,9 @@
       "year": 2020,
       "pcpartpicker_search": "RX 6900 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3080 12GB",
@@ -528,7 +578,7 @@
       "performance_score": 55.9,
       "price_gbp": 300,
       "price_perf_ratio": 18.6,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 7.5,
       "arch": "Ampere",
       "tdp": 350,
@@ -539,7 +589,9 @@
       "year": 2022,
       "pcpartpicker_search": "RTX 3080 12GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4080 Laptop",
@@ -548,7 +600,7 @@
       "performance_score": 55.9,
       "price_gbp": 360,
       "price_perf_ratio": 15.5,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 7.5,
       "arch": "Ada Lovelace",
       "tdp": 150,
@@ -559,7 +611,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6800 XT",
@@ -568,7 +622,7 @@
       "performance_score": 55.0,
       "price_gbp": 310,
       "price_perf_ratio": 17.7,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 7.4,
       "arch": "RDNA 2",
       "tdp": 300,
@@ -579,7 +633,9 @@
       "year": 2020,
       "pcpartpicker_search": "RX 6800 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3080 10GB",
@@ -599,7 +655,9 @@
       "year": 2020,
       "pcpartpicker_search": "RTX 3080 10GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6800",
@@ -608,7 +666,7 @@
       "performance_score": 49.9,
       "price_gbp": 270,
       "price_perf_ratio": 18.5,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 7.1,
       "arch": "RDNA 2",
       "tdp": 250,
@@ -619,7 +677,9 @@
       "year": 2020,
       "pcpartpicker_search": "RX 6800",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 7700 XT",
@@ -628,7 +688,7 @@
       "performance_score": 49.9,
       "price_gbp": 280,
       "price_perf_ratio": 17.8,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 7.1,
       "arch": "RDNA 3",
       "tdp": 245,
@@ -639,7 +699,9 @@
       "year": 2023,
       "pcpartpicker_search": "RX 7700 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3070 Ti",
@@ -659,7 +721,9 @@
       "year": 2021,
       "pcpartpicker_search": "RTX 3070 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3070",
@@ -679,7 +743,9 @@
       "year": 2020,
       "pcpartpicker_search": "RTX 3070",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5060 Ti 16GB",
@@ -699,7 +765,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5060 Ti 16GB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Radeon RX 9060 XT 16GB",
@@ -708,7 +776,7 @@
       "performance_score": 46.8,
       "price_gbp": 319,
       "price_perf_ratio": 14.7,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 6.8,
       "arch": "RDNA 4",
       "tdp": 160,
@@ -719,7 +787,9 @@
       "year": 2025,
       "pcpartpicker_search": "RX 9060 XT 16GB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 2080 Ti",
@@ -739,7 +809,9 @@
       "year": 2018,
       "pcpartpicker_search": "RTX 2080 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5060 Ti 8GB",
@@ -748,7 +820,7 @@
       "performance_score": 46.8,
       "price_gbp": 349,
       "price_perf_ratio": 13.4,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 6.8,
       "arch": "Blackwell",
       "tdp": 180,
@@ -759,7 +831,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5060 Ti 8GB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Radeon RX 9060 XT 8GB",
@@ -768,7 +842,7 @@
       "performance_score": 45.7,
       "price_gbp": 259,
       "price_perf_ratio": 17.6,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 6.8,
       "arch": "RDNA 4",
       "tdp": 150,
@@ -779,7 +853,9 @@
       "year": 2025,
       "pcpartpicker_search": "RX 9060 XT 8GB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 5070 Laptop",
@@ -788,7 +864,7 @@
       "performance_score": 45.7,
       "price_gbp": 330,
       "price_perf_ratio": 13.8,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.8,
       "arch": "Blackwell",
       "tdp": 115,
@@ -799,7 +875,9 @@
       "year": 2025,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6750 XT",
@@ -819,7 +897,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 6750 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3080 Laptop",
@@ -828,7 +908,7 @@
       "performance_score": 44.6,
       "price_gbp": 220,
       "price_perf_ratio": 20.3,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 6.7,
       "arch": "Ampere",
       "tdp": 150,
@@ -839,7 +919,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4060 Ti 16GB",
@@ -859,7 +941,9 @@
       "year": 2023,
       "pcpartpicker_search": "RTX 4060 Ti 16GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3060 Ti",
@@ -879,7 +963,9 @@
       "year": 2020,
       "pcpartpicker_search": "RTX 3060 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4060 Ti 8GB",
@@ -888,7 +974,7 @@
       "performance_score": 43.5,
       "price_gbp": 250,
       "price_perf_ratio": 17.4,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 6.6,
       "arch": "Ada Lovelace",
       "tdp": 160,
@@ -899,7 +985,9 @@
       "year": 2023,
       "pcpartpicker_search": "RTX 4060 Ti 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6700 XT",
@@ -919,7 +1007,9 @@
       "year": 2021,
       "pcpartpicker_search": "RX 6700 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4070 Laptop",
@@ -928,7 +1018,7 @@
       "performance_score": 41.4,
       "price_gbp": 240,
       "price_perf_ratio": 17.2,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.4,
       "arch": "Ada Lovelace",
       "tdp": 115,
@@ -939,7 +1029,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc B580",
@@ -948,7 +1040,7 @@
       "performance_score": 40.2,
       "price_gbp": 239,
       "price_perf_ratio": 16.8,
-      "pp_label": "Fair",
+      "pp_label": "Excellent",
       "tier": 6.3,
       "arch": "Xe2 Battlemage",
       "tdp": 190,
@@ -959,7 +1051,9 @@
       "year": 2024,
       "pcpartpicker_search": "Arc B580",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 2080 Super",
@@ -979,7 +1073,9 @@
       "year": 2019,
       "pcpartpicker_search": "RTX 2080 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5060",
@@ -988,7 +1084,7 @@
       "performance_score": 40.2,
       "price_gbp": 269,
       "price_perf_ratio": 14.9,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 6.3,
       "arch": "Blackwell",
       "tdp": 145,
@@ -999,7 +1095,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5060",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Radeon RX 6700 10GB",
@@ -1019,7 +1117,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 6700 10GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 7600 XT",
@@ -1028,7 +1128,7 @@
       "performance_score": 39.1,
       "price_gbp": 210,
       "price_perf_ratio": 18.6,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 6.3,
       "arch": "RDNA 3",
       "tdp": 190,
@@ -1039,7 +1139,9 @@
       "year": 2024,
       "pcpartpicker_search": "RX 7600 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 2080",
@@ -1059,7 +1161,9 @@
       "year": 2018,
       "pcpartpicker_search": "RTX 2080",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3070 Laptop",
@@ -1068,7 +1172,7 @@
       "performance_score": 39.1,
       "price_gbp": 180,
       "price_perf_ratio": 21.7,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 6.3,
       "arch": "Ampere",
       "tdp": 125,
@@ -1079,7 +1183,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5060 Laptop",
@@ -1088,7 +1194,7 @@
       "performance_score": 39.1,
       "price_gbp": 260,
       "price_perf_ratio": 15.0,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.3,
       "arch": "Blackwell",
       "tdp": 115,
@@ -1099,7 +1205,9 @@
       "year": 2025,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 7600",
@@ -1119,7 +1227,9 @@
       "year": 2023,
       "pcpartpicker_search": "RX 7600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc A770 16GB",
@@ -1128,7 +1238,7 @@
       "performance_score": 38.0,
       "price_gbp": 160,
       "price_perf_ratio": 23.8,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 6.2,
       "arch": "Xe-HPG Alchemist",
       "tdp": 225,
@@ -1139,7 +1249,9 @@
       "year": 2022,
       "pcpartpicker_search": "Arc A770 16GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 2070 Super",
@@ -1159,7 +1271,9 @@
       "year": 2019,
       "pcpartpicker_search": "RTX 2070 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc A580",
@@ -1179,7 +1293,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Arc A580",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6650 XT",
@@ -1199,7 +1315,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 6650 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc B570",
@@ -1208,7 +1326,7 @@
       "performance_score": 36.5,
       "price_gbp": 189,
       "price_perf_ratio": 19.3,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 6.0,
       "arch": "Xe2 Battlemage",
       "tdp": 150,
@@ -1219,7 +1337,9 @@
       "year": 2025,
       "pcpartpicker_search": "Arc B570",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce RTX 4060",
@@ -1228,7 +1348,7 @@
       "performance_score": 36.5,
       "price_gbp": 199,
       "price_perf_ratio": 18.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 6.0,
       "arch": "Ada Lovelace",
       "tdp": 115,
@@ -1239,7 +1359,9 @@
       "year": 2023,
       "pcpartpicker_search": "RTX 4060",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 5700 XT",
@@ -1259,7 +1381,9 @@
       "year": 2019,
       "pcpartpicker_search": "RX 5700 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6600 XT",
@@ -1279,7 +1403,9 @@
       "year": 2021,
       "pcpartpicker_search": "RX 6600 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1080 Ti",
@@ -1299,7 +1425,9 @@
       "year": 2017,
       "pcpartpicker_search": "GTX 1080 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3060 12GB",
@@ -1319,7 +1447,9 @@
       "year": 2021,
       "pcpartpicker_search": "RTX 3060 12GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc A750",
@@ -1339,7 +1469,9 @@
       "year": 2022,
       "pcpartpicker_search": "Arc A750",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 2070",
@@ -1359,7 +1491,9 @@
       "year": 2018,
       "pcpartpicker_search": "RTX 2070",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4060 Laptop",
@@ -1368,7 +1502,7 @@
       "performance_score": 33.4,
       "price_gbp": 180,
       "price_perf_ratio": 18.6,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 5.8,
       "arch": "Ada Lovelace",
       "tdp": 100,
@@ -1379,7 +1513,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 2060 Super",
@@ -1399,7 +1535,9 @@
       "year": 2019,
       "pcpartpicker_search": "RTX 2060 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 5700",
@@ -1419,7 +1557,9 @@
       "year": 2019,
       "pcpartpicker_search": "RX 5700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6600",
@@ -1439,7 +1579,9 @@
       "year": 2021,
       "pcpartpicker_search": "RX 6600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3060 8GB",
@@ -1459,7 +1601,9 @@
       "year": 2022,
       "pcpartpicker_search": "RTX 3060 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3060 Laptop",
@@ -1468,7 +1612,7 @@
       "performance_score": 30.3,
       "price_gbp": 140,
       "price_perf_ratio": 21.6,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 5.5,
       "arch": "Ampere",
       "tdp": 115,
@@ -1479,7 +1623,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 5050",
@@ -1488,7 +1634,7 @@
       "performance_score": 30.3,
       "price_gbp": 209,
       "price_perf_ratio": 14.5,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 5.5,
       "arch": "Blackwell",
       "tdp": 130,
@@ -1499,7 +1645,9 @@
       "year": 2025,
       "pcpartpicker_search": "RTX 5050",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "NVIDIA GeForce GTX 1080",
@@ -1519,7 +1667,9 @@
       "year": 2016,
       "pcpartpicker_search": "GTX 1080",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 2060",
@@ -1539,7 +1689,9 @@
       "year": 2019,
       "pcpartpicker_search": "RTX 2060",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 5600 XT",
@@ -1559,7 +1711,9 @@
       "year": 2020,
       "pcpartpicker_search": "RX 5600 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3050 8GB",
@@ -1579,7 +1733,9 @@
       "year": 2022,
       "pcpartpicker_search": "RTX 3050 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1070 Ti",
@@ -1599,7 +1755,9 @@
       "year": 2017,
       "pcpartpicker_search": "GTX 1070 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 4050 Laptop",
@@ -1608,7 +1766,7 @@
       "performance_score": 24.2,
       "price_gbp": 130,
       "price_perf_ratio": 18.6,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 4.9,
       "arch": "Ada Lovelace",
       "tdp": 75,
@@ -1619,7 +1777,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX Vega 64",
@@ -1628,7 +1788,7 @@
       "performance_score": 22.6,
       "price_gbp": 100,
       "price_perf_ratio": 22.6,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 4.8,
       "arch": "Vega",
       "tdp": 295,
@@ -1639,7 +1799,9 @@
       "year": 2017,
       "pcpartpicker_search": "RX Vega 64",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1070",
@@ -1648,7 +1810,7 @@
       "performance_score": 22.6,
       "price_gbp": 95,
       "price_perf_ratio": 23.8,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 4.8,
       "arch": "Pascal",
       "tdp": 150,
@@ -1659,7 +1821,9 @@
       "year": 2016,
       "pcpartpicker_search": "GTX 1070",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1660 Ti",
@@ -1679,7 +1843,9 @@
       "year": 2019,
       "pcpartpicker_search": "GTX 1660 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 2060 Laptop",
@@ -1688,7 +1854,7 @@
       "performance_score": 22.6,
       "price_gbp": 95,
       "price_perf_ratio": 23.8,
-      "pp_label": "Excellent",
+      "pp_label": "n/a",
       "tier": 4.8,
       "arch": "Turing",
       "tdp": 90,
@@ -1699,7 +1865,9 @@
       "year": 2019,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1660 Super",
@@ -1719,7 +1887,9 @@
       "year": 2019,
       "pcpartpicker_search": "GTX 1660 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1660",
@@ -1739,7 +1909,9 @@
       "year": 2019,
       "pcpartpicker_search": "GTX 1660",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 980 Ti",
@@ -1759,7 +1931,9 @@
       "year": 2015,
       "pcpartpicker_search": "GTX 980 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX Vega 56",
@@ -1768,7 +1942,7 @@
       "performance_score": 19.6,
       "price_gbp": 85,
       "price_perf_ratio": 23.1,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 4.4,
       "arch": "Vega",
       "tdp": 210,
@@ -1779,7 +1953,9 @@
       "year": 2017,
       "pcpartpicker_search": "RX Vega 56",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1660 Ti Laptop",
@@ -1788,7 +1964,7 @@
       "performance_score": 18.8,
       "price_gbp": 85,
       "price_perf_ratio": 22.1,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 4.3,
       "arch": "Turing",
       "tdp": 80,
@@ -1799,7 +1975,9 @@
       "year": 2019,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 Fury X",
@@ -1819,7 +1997,9 @@
       "year": 2015,
       "pcpartpicker_search": "R9 Fury X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3050 6GB",
@@ -1839,7 +2019,9 @@
       "year": 2024,
       "pcpartpicker_search": "RTX 3050 6GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 590 8GB",
@@ -1859,7 +2041,9 @@
       "year": 2018,
       "pcpartpicker_search": "RX 590 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 5500 XT 8GB",
@@ -1868,7 +2052,7 @@
       "performance_score": 16.5,
       "price_gbp": 70,
       "price_perf_ratio": 23.6,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 4.1,
       "arch": "RDNA 1",
       "tdp": 130,
@@ -1879,7 +2063,9 @@
       "year": 2019,
       "pcpartpicker_search": "RX 5500 XT 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1650 Super",
@@ -1899,7 +2085,9 @@
       "year": 2019,
       "pcpartpicker_search": "GTX 1650 Super",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce RTX 3050 Laptop",
@@ -1908,7 +2096,7 @@
       "performance_score": 16.5,
       "price_gbp": 90,
       "price_perf_ratio": 18.3,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 4.1,
       "arch": "Ampere",
       "tdp": 60,
@@ -1919,7 +2107,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 980",
@@ -1939,7 +2129,9 @@
       "year": 2014,
       "pcpartpicker_search": "GTX 980",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 580 8GB",
@@ -1959,7 +2151,9 @@
       "year": 2017,
       "pcpartpicker_search": "RX 580 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1060 6GB",
@@ -1979,7 +2173,9 @@
       "year": 2016,
       "pcpartpicker_search": "GTX 1060 6GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 480 8GB",
@@ -1999,7 +2195,9 @@
       "year": 2016,
       "pcpartpicker_search": "RX 480 8GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6500 XT",
@@ -2019,7 +2217,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 6500 XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1060 Laptop 6GB",
@@ -2028,7 +2228,7 @@
       "performance_score": 13.5,
       "price_gbp": 65,
       "price_perf_ratio": 20.8,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 3.7,
       "arch": "Pascal",
       "tdp": 80,
@@ -2039,7 +2239,9 @@
       "year": 2016,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 390X",
@@ -2048,7 +2250,7 @@
       "performance_score": 13.0,
       "price_gbp": 55,
       "price_perf_ratio": 23.6,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.6,
       "arch": "GCN 2.0",
       "tdp": 275,
@@ -2059,7 +2261,9 @@
       "year": 2015,
       "pcpartpicker_search": "R9 390X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 570 4GB",
@@ -2079,7 +2283,9 @@
       "year": 2017,
       "pcpartpicker_search": "RX 570 4GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 970",
@@ -2099,7 +2305,9 @@
       "year": 2014,
       "pcpartpicker_search": "GTX 970",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1060 3GB",
@@ -2119,7 +2327,9 @@
       "year": 2016,
       "pcpartpicker_search": "GTX 1060 3GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 470",
@@ -2139,7 +2349,9 @@
       "year": 2016,
       "pcpartpicker_search": "RX 470",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 780 Ti",
@@ -2159,7 +2371,9 @@
       "year": 2013,
       "pcpartpicker_search": "GTX 780 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 390",
@@ -2179,7 +2393,9 @@
       "year": 2015,
       "pcpartpicker_search": "R9 390",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc A380",
@@ -2199,7 +2415,9 @@
       "year": 2022,
       "pcpartpicker_search": "Arc A380",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1650",
@@ -2208,7 +2426,7 @@
       "performance_score": 11.9,
       "price_gbp": 65,
       "price_perf_ratio": 18.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.4,
       "arch": "Turing",
       "tdp": 75,
@@ -2219,7 +2437,9 @@
       "year": 2019,
       "pcpartpicker_search": "GTX 1650",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 290X",
@@ -2239,7 +2459,9 @@
       "year": 2013,
       "pcpartpicker_search": "R9 290X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon 890M Graphics",
@@ -2259,7 +2481,9 @@
       "year": 2024,
       "pcpartpicker_search": "890M Graphics",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 290",
@@ -2279,7 +2503,9 @@
       "year": 2013,
       "pcpartpicker_search": "R9 290",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 780",
@@ -2299,7 +2525,9 @@
       "year": 2013,
       "pcpartpicker_search": "GTX 780",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon 780M Graphics",
@@ -2308,7 +2536,7 @@
       "performance_score": 9.6,
       "price_gbp": 70,
       "price_perf_ratio": 13.7,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 3.1,
       "arch": "RDNA 3",
       "tdp": 28,
@@ -2319,7 +2547,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 6400",
@@ -2328,7 +2558,7 @@
       "performance_score": 9.6,
       "price_gbp": 55,
       "price_perf_ratio": 17.5,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.1,
       "arch": "RDNA 2",
       "tdp": 53,
@@ -2339,7 +2569,9 @@
       "year": 2022,
       "pcpartpicker_search": "RX 6400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1650 Laptop",
@@ -2348,7 +2580,7 @@
       "performance_score": 9.6,
       "price_gbp": 60,
       "price_perf_ratio": 16.0,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 3.1,
       "arch": "Turing",
       "tdp": 50,
@@ -2359,7 +2591,9 @@
       "year": 2019,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 960 4GB",
@@ -2368,7 +2602,7 @@
       "performance_score": 9.0,
       "price_gbp": 38,
       "price_perf_ratio": 23.7,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.0,
       "arch": "Maxwell",
       "tdp": 120,
@@ -2379,7 +2613,9 @@
       "year": 2015,
       "pcpartpicker_search": "GTX 960 4GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 770",
@@ -2399,7 +2635,9 @@
       "year": 2013,
       "pcpartpicker_search": "GTX 770",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 280X",
@@ -2408,7 +2646,7 @@
       "performance_score": 8.2,
       "price_gbp": 35,
       "price_perf_ratio": 23.4,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.9,
       "arch": "GCN 1.0",
       "tdp": 250,
@@ -2419,7 +2657,9 @@
       "year": 2013,
       "pcpartpicker_search": "R9 280X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1050 Ti",
@@ -2439,7 +2679,9 @@
       "year": 2016,
       "pcpartpicker_search": "GTX 1050 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 680",
@@ -2459,7 +2701,9 @@
       "year": 2012,
       "pcpartpicker_search": "GTX 680",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon 680M Graphics",
@@ -2479,7 +2723,9 @@
       "year": 2022,
       "pcpartpicker_search": "680M Graphics",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 380",
@@ -2499,7 +2745,9 @@
       "year": 2015,
       "pcpartpicker_search": "R9 380",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 7970",
@@ -2519,7 +2767,9 @@
       "year": 2011,
       "pcpartpicker_search": "HD 7970",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Arc Graphics (Meteor Lake)",
@@ -2539,7 +2789,9 @@
       "year": 2023,
       "pcpartpicker_search": "Arc Graphics (Meteor Lake)",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 670",
@@ -2559,7 +2811,9 @@
       "year": 2012,
       "pcpartpicker_search": "GTX 670",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 950",
@@ -2568,7 +2822,7 @@
       "performance_score": 7.1,
       "price_gbp": 30,
       "price_perf_ratio": 23.7,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.7,
       "arch": "Maxwell",
       "tdp": 90,
@@ -2579,7 +2833,9 @@
       "year": 2015,
       "pcpartpicker_search": "GTX 950",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 280",
@@ -2599,7 +2855,9 @@
       "year": 2014,
       "pcpartpicker_search": "R9 280",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1050",
@@ -2619,7 +2877,9 @@
       "year": 2016,
       "pcpartpicker_search": "GTX 1050",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 760",
@@ -2639,7 +2899,9 @@
       "year": 2013,
       "pcpartpicker_search": "GTX 760",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 7950",
@@ -2659,7 +2921,9 @@
       "year": 2012,
       "pcpartpicker_search": "HD 7950",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 560",
@@ -2668,7 +2932,7 @@
       "performance_score": 6.4,
       "price_gbp": 35,
       "price_perf_ratio": 18.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 2.5,
       "arch": "Polaris",
       "tdp": 80,
@@ -2679,7 +2943,9 @@
       "year": 2017,
       "pcpartpicker_search": "RX 560",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 660 Ti",
@@ -2699,7 +2965,9 @@
       "year": 2012,
       "pcpartpicker_search": "GTX 660 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 580",
@@ -2708,7 +2976,7 @@
       "performance_score": 5.9,
       "price_gbp": 25,
       "price_perf_ratio": 23.6,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.4,
       "arch": "Fermi",
       "tdp": 244,
@@ -2719,7 +2987,9 @@
       "year": 2010,
       "pcpartpicker_search": "GTX 580",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 270X",
@@ -2739,7 +3009,9 @@
       "year": 2013,
       "pcpartpicker_search": "R9 270X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 1630",
@@ -2759,7 +3031,9 @@
       "year": 2022,
       "pcpartpicker_search": "GTX 1630",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon R9 270",
@@ -2768,7 +3042,7 @@
       "performance_score": 5.2,
       "price_gbp": 22,
       "price_perf_ratio": 23.6,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.3,
       "arch": "GCN 1.0",
       "tdp": 150,
@@ -2779,7 +3053,9 @@
       "year": 2013,
       "pcpartpicker_search": "R9 270",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 660",
@@ -2799,7 +3075,9 @@
       "year": 2012,
       "pcpartpicker_search": "GTX 660",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 7870",
@@ -2819,7 +3097,9 @@
       "year": 2012,
       "pcpartpicker_search": "HD 7870",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 570",
@@ -2839,7 +3119,9 @@
       "year": 2010,
       "pcpartpicker_search": "GTX 570",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 750 Ti",
@@ -2859,7 +3141,9 @@
       "year": 2014,
       "pcpartpicker_search": "GTX 750 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 460",
@@ -2879,7 +3163,9 @@
       "year": 2016,
       "pcpartpicker_search": "RX 460",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GT 1030",
@@ -2899,7 +3185,9 @@
       "year": 2017,
       "pcpartpicker_search": "GT 1030",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Iris Xe Graphics (96 EU)",
@@ -2908,7 +3196,7 @@
       "performance_score": 4.6,
       "price_gbp": 35,
       "price_perf_ratio": 13.1,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 2.1,
       "arch": "Xe-LP",
       "tdp": 28,
@@ -2919,7 +3207,9 @@
       "year": 2020,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 560 Ti",
@@ -2939,7 +3229,9 @@
       "year": 2011,
       "pcpartpicker_search": "GTX 560 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 7850",
@@ -2959,7 +3251,9 @@
       "year": 2012,
       "pcpartpicker_search": "HD 7850",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon Vega 11 Graphics",
@@ -2979,7 +3273,9 @@
       "year": 2018,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 750",
@@ -2988,7 +3284,7 @@
       "performance_score": 3.9,
       "price_gbp": 22,
       "price_perf_ratio": 17.7,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 2.0,
       "arch": "Maxwell",
       "tdp": 55,
@@ -2999,7 +3295,9 @@
       "year": 2014,
       "pcpartpicker_search": "GTX 750",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 6970",
@@ -3019,7 +3317,9 @@
       "year": 2010,
       "pcpartpicker_search": "HD 6970",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 650 Ti",
@@ -3039,7 +3339,9 @@
       "year": 2012,
       "pcpartpicker_search": "GTX 650 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon RX 550",
@@ -3059,7 +3361,9 @@
       "year": 2017,
       "pcpartpicker_search": "RX 550",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 6950",
@@ -3068,7 +3372,7 @@
       "performance_score": 3.3,
       "price_gbp": 18,
       "price_perf_ratio": 18.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 1.8,
       "arch": "TeraScale 3",
       "tdp": 200,
@@ -3079,7 +3383,9 @@
       "year": 2010,
       "pcpartpicker_search": "HD 6950",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon Vega 8 Graphics",
@@ -3099,7 +3405,9 @@
       "year": 2019,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 460 1GB",
@@ -3119,7 +3427,9 @@
       "year": 2010,
       "pcpartpicker_search": "GTX 460 1GB",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 6870",
@@ -3139,7 +3449,9 @@
       "year": 2010,
       "pcpartpicker_search": "HD 6870",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel UHD Graphics 770",
@@ -3148,7 +3460,7 @@
       "performance_score": 3.0,
       "price_gbp": 25,
       "price_perf_ratio": 12.0,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 1.7,
       "arch": "Xe-LP",
       "tdp": 15,
@@ -3159,7 +3471,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Radeon HD 7770",
@@ -3179,7 +3493,9 @@
       "year": 2012,
       "pcpartpicker_search": "HD 7770",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel UHD Graphics 730",
@@ -3188,7 +3504,7 @@
       "performance_score": 2.3,
       "price_gbp": 22,
       "price_perf_ratio": 10.5,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 1.5,
       "arch": "Xe-LP",
       "tdp": 15,
@@ -3199,7 +3515,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "NVIDIA GeForce GTX 550 Ti",
@@ -3219,7 +3537,9 @@
       "year": 2011,
       "pcpartpicker_search": "GTX 550 Ti",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel UHD Graphics 630",
@@ -3228,7 +3548,7 @@
       "performance_score": 2.0,
       "price_gbp": 20,
       "price_perf_ratio": 10.0,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 1.4,
       "arch": "Gen 9.5",
       "tdp": 15,
@@ -3239,7 +3559,9 @@
       "year": 2017,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     }
   ],
   "cpus": [
@@ -3261,7 +3583,9 @@
       "year": 2025,
       "pcpartpicker_search": "AMD Ryzen 9 9950X3D",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-14900KS",
@@ -3281,7 +3605,9 @@
       "year": 2024,
       "pcpartpicker_search": "Intel Core i9-14900KS",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 9 9950X",
@@ -3301,7 +3627,9 @@
       "year": 2024,
       "pcpartpicker_search": "AMD Ryzen 9 9950X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core Ultra 9 285K",
@@ -3321,7 +3649,9 @@
       "year": 2024,
       "pcpartpicker_search": "Intel Core Ultra 9 285K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-14900K",
@@ -3341,7 +3671,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i9-14900K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 9900X3D",
@@ -3361,7 +3693,9 @@
       "year": 2025,
       "pcpartpicker_search": "AMD Ryzen 9 9900X3D",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-13900KS",
@@ -3381,7 +3715,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i9-13900KS",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core Ultra 7 265K",
@@ -3401,7 +3737,9 @@
       "year": 2024,
       "pcpartpicker_search": "Intel Core Ultra 7 265K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 9900X",
@@ -3421,7 +3759,9 @@
       "year": 2024,
       "pcpartpicker_search": "AMD Ryzen 9 9900X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-13900K",
@@ -3441,7 +3781,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i9-13900K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 9800X3D",
@@ -3461,7 +3803,9 @@
       "year": 2024,
       "pcpartpicker_search": "AMD Ryzen 7 9800X3D",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i7-14700K",
@@ -3481,7 +3825,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i7-14700K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 7950X3D",
@@ -3501,7 +3847,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 9 7950X3D",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 7950X",
@@ -3521,7 +3869,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 9 7950X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core Ultra 5 245K",
@@ -3530,7 +3880,7 @@
       "performance_score": 85,
       "price_gbp": 249,
       "price_perf_ratio": 34.1,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 8.5,
       "base_ghz": 4.2,
       "boost_ghz": 5.2,
@@ -3541,7 +3891,9 @@
       "year": 2024,
       "pcpartpicker_search": "Intel Core Ultra 5 245K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i7-13700K",
@@ -3561,7 +3913,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i7-13700K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 9700X",
@@ -3570,7 +3924,7 @@
       "performance_score": 83,
       "price_gbp": 289,
       "price_perf_ratio": 28.7,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 8.3,
       "base_ghz": 3.8,
       "boost_ghz": 5.5,
@@ -3581,7 +3935,9 @@
       "year": 2024,
       "pcpartpicker_search": "AMD Ryzen 7 9700X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 7900X3D",
@@ -3601,7 +3957,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 9 7900X3D",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-14600K",
@@ -3610,7 +3968,7 @@
       "performance_score": 82,
       "price_gbp": 249,
       "price_perf_ratio": 32.9,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 8.2,
       "base_ghz": 3.5,
       "boost_ghz": 5.3,
@@ -3621,7 +3979,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i5-14600K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 7900X",
@@ -3641,7 +4001,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 9 7900X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 7900",
@@ -3661,7 +4023,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 9 7900",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i7-13700",
@@ -3670,7 +4034,7 @@
       "performance_score": 78,
       "price_gbp": 279,
       "price_perf_ratio": 28.0,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 7.8,
       "base_ghz": 2.1,
       "boost_ghz": 5.2,
@@ -3681,7 +4045,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i7-13700",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i5-13600K",
@@ -3690,7 +4056,7 @@
       "performance_score": 78,
       "price_gbp": 279,
       "price_perf_ratio": 28.0,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 7.8,
       "base_ghz": 3.5,
       "boost_ghz": 5.1,
@@ -3701,7 +4067,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i5-13600K",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 5 9600X",
@@ -3710,7 +4078,7 @@
       "performance_score": 78,
       "price_gbp": 209,
       "price_perf_ratio": 37.3,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 7.8,
       "base_ghz": 3.9,
       "boost_ghz": 5.4,
@@ -3721,7 +4089,9 @@
       "year": 2024,
       "pcpartpicker_search": "AMD Ryzen 5 9600X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-12900K",
@@ -3741,7 +4111,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i9-12900K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 9600",
@@ -3761,7 +4133,9 @@
       "year": 2025,
       "pcpartpicker_search": "AMD Ryzen 5 9600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 7700X",
@@ -3770,7 +4144,7 @@
       "performance_score": 75,
       "price_gbp": 239,
       "price_perf_ratio": 31.4,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 7.5,
       "base_ghz": 4.5,
       "boost_ghz": 5.4,
@@ -3781,7 +4155,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 7 7700X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 7700",
@@ -3790,7 +4166,7 @@
       "performance_score": 73,
       "price_gbp": 219,
       "price_perf_ratio": 33.3,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 7.3,
       "base_ghz": 3.8,
       "boost_ghz": 5.3,
@@ -3801,7 +4177,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 7 7700",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 7800X3D",
@@ -3821,7 +4199,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 7 7800X3D",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 5 7600X",
@@ -3830,7 +4210,7 @@
       "performance_score": 72,
       "price_gbp": 199,
       "price_perf_ratio": 36.2,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 7.2,
       "base_ghz": 4.7,
       "boost_ghz": 5.3,
@@ -3841,7 +4221,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 5 7600X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i7-12700K",
@@ -3861,7 +4243,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i7-12700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 7600",
@@ -3870,7 +4254,7 @@
       "performance_score": 69,
       "price_gbp": 159,
       "price_perf_ratio": 43.4,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 6.9,
       "base_ghz": 3.8,
       "boost_ghz": 5.1,
@@ -3881,7 +4265,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 5 7600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i5-13500",
@@ -3890,7 +4276,7 @@
       "performance_score": 68,
       "price_gbp": 189,
       "price_perf_ratio": 36.0,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 6.8,
       "base_ghz": 2.5,
       "boost_ghz": 4.8,
@@ -3901,7 +4287,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i5-13500",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i7-12700",
@@ -3921,7 +4309,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i7-12700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-12600K",
@@ -3930,7 +4320,7 @@
       "performance_score": 67,
       "price_gbp": 165,
       "price_perf_ratio": 40.6,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 6.7,
       "base_ghz": 3.7,
       "boost_ghz": 4.9,
@@ -3941,7 +4331,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i5-12600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 7500F",
@@ -3950,7 +4342,7 @@
       "performance_score": 67,
       "price_gbp": 135,
       "price_perf_ratio": 49.6,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 6.7,
       "base_ghz": 3.7,
       "boost_ghz": 5.0,
@@ -3961,7 +4353,9 @@
       "year": 2023,
       "pcpartpicker_search": "AMD Ryzen 5 7500F",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core Ultra 9 185H",
@@ -3970,7 +4364,7 @@
       "performance_score": 66,
       "price_gbp": 259,
       "price_perf_ratio": 25.5,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.6,
       "base_ghz": 2.3,
       "boost_ghz": 5.1,
@@ -3981,7 +4375,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core Ultra 9 185H",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-14400F",
@@ -3990,7 +4386,7 @@
       "performance_score": 65,
       "price_gbp": 149,
       "price_perf_ratio": 43.6,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 6.5,
       "base_ghz": 2.5,
       "boost_ghz": 4.7,
@@ -4001,7 +4397,9 @@
       "year": 2024,
       "pcpartpicker_search": "Intel Core i5-14400F",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 5950X",
@@ -4021,7 +4419,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 9 5950X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 8845HS",
@@ -4030,7 +4430,7 @@
       "performance_score": 63,
       "price_gbp": 219,
       "price_perf_ratio": 28.8,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.3,
       "base_ghz": 3.8,
       "boost_ghz": 5.1,
@@ -4041,7 +4441,9 @@
       "year": 2024,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-13400F",
@@ -4050,7 +4452,7 @@
       "performance_score": 63,
       "price_gbp": 139,
       "price_perf_ratio": 45.3,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 6.3,
       "base_ghz": 2.5,
       "boost_ghz": 4.6,
@@ -4061,7 +4463,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i5-13400F",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 5900X",
@@ -4070,7 +4474,7 @@
       "performance_score": 61,
       "price_gbp": 199,
       "price_perf_ratio": 30.7,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 6.1,
       "base_ghz": 3.7,
       "boost_ghz": 4.8,
@@ -4081,7 +4485,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 9 5900X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 7840HS",
@@ -4090,7 +4496,7 @@
       "performance_score": 61,
       "price_gbp": 199,
       "price_perf_ratio": 30.7,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.1,
       "base_ghz": 3.8,
       "boost_ghz": 5.1,
@@ -4101,7 +4507,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core Ultra 7 155H",
@@ -4110,7 +4518,7 @@
       "performance_score": 61,
       "price_gbp": 199,
       "price_perf_ratio": 30.7,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 6.1,
       "base_ghz": 1.4,
       "boost_ghz": 4.8,
@@ -4121,7 +4529,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core Ultra 7 155H",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-13620H",
@@ -4130,7 +4540,7 @@
       "performance_score": 59,
       "price_gbp": 165,
       "price_perf_ratio": 35.8,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 5.9,
       "base_ghz": 2.4,
       "boost_ghz": 4.9,
@@ -4141,7 +4551,9 @@
       "year": 2023,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-12500",
@@ -4150,7 +4562,7 @@
       "performance_score": 59,
       "price_gbp": 125,
       "price_perf_ratio": 47.2,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 5.9,
       "base_ghz": 3.0,
       "boost_ghz": 4.6,
@@ -4161,7 +4573,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i5-12500",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-11900K",
@@ -4181,7 +4595,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i9-11900K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-12400F",
@@ -4190,7 +4606,7 @@
       "performance_score": 58,
       "price_gbp": 149,
       "price_perf_ratio": 38.9,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 5.8,
       "base_ghz": 2.5,
       "boost_ghz": 4.4,
@@ -4201,7 +4617,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i5-12400F",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 5800X3D",
@@ -4221,7 +4639,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 7 5800X3D",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 5800X",
@@ -4230,7 +4650,7 @@
       "performance_score": 57,
       "price_gbp": 145,
       "price_perf_ratio": 39.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 5.7,
       "base_ghz": 3.8,
       "boost_ghz": 4.7,
@@ -4241,7 +4661,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 7 5800X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-12700H",
@@ -4250,7 +4672,7 @@
       "performance_score": 56,
       "price_gbp": 165,
       "price_perf_ratio": 33.9,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 5.6,
       "base_ghz": 2.3,
       "boost_ghz": 4.7,
@@ -4261,7 +4683,9 @@
       "year": 2022,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-11700K",
@@ -4270,7 +4694,7 @@
       "performance_score": 55,
       "price_gbp": 125,
       "price_perf_ratio": 44.0,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 5.5,
       "base_ghz": 3.6,
       "boost_ghz": 5.0,
@@ -4281,7 +4705,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i7-11700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i3-13100F",
@@ -4290,7 +4716,7 @@
       "performance_score": 55,
       "price_gbp": 85,
       "price_perf_ratio": 64.7,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 5.5,
       "base_ghz": 3.4,
       "boost_ghz": 4.5,
@@ -4301,7 +4727,9 @@
       "year": 2023,
       "pcpartpicker_search": "Intel Core i3-13100F",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 5700X",
@@ -4321,7 +4749,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 7 5700X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 5 5600X",
@@ -4330,7 +4760,7 @@
       "performance_score": 53,
       "price_gbp": 149,
       "price_perf_ratio": 35.6,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 5.3,
       "base_ghz": 3.7,
       "boost_ghz": 4.6,
@@ -4341,7 +4771,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 5 5600X",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 7 5700",
@@ -4350,7 +4782,7 @@
       "performance_score": 52,
       "price_gbp": 119,
       "price_perf_ratio": 43.7,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 5.2,
       "base_ghz": 3.7,
       "boost_ghz": 4.6,
@@ -4361,7 +4793,9 @@
       "year": 2024,
       "pcpartpicker_search": "AMD Ryzen 7 5700",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 5 5600",
@@ -4381,7 +4815,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 5 5600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i5-11600K",
@@ -4401,7 +4837,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i5-11600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 5700G",
@@ -4410,7 +4848,7 @@
       "performance_score": 51,
       "price_gbp": 139,
       "price_perf_ratio": 36.7,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "tier": 5.1,
       "base_ghz": 3.8,
       "boost_ghz": 4.6,
@@ -4421,7 +4859,9 @@
       "year": 2021,
       "pcpartpicker_search": "AMD Ryzen 7 5700G",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i9-10900K",
@@ -4441,7 +4881,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i9-10900K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i3-12100F",
@@ -4450,7 +4892,7 @@
       "performance_score": 51,
       "price_gbp": 75,
       "price_perf_ratio": 68.0,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 5.1,
       "base_ghz": 3.3,
       "boost_ghz": 4.3,
@@ -4461,7 +4903,9 @@
       "year": 2022,
       "pcpartpicker_search": "Intel Core i3-12100F",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i7-10700K",
@@ -4470,7 +4914,7 @@
       "performance_score": 49,
       "price_gbp": 110,
       "price_perf_ratio": 44.5,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.9,
       "base_ghz": 3.8,
       "boost_ghz": 5.1,
@@ -4481,7 +4925,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i7-10700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 5600G",
@@ -4490,7 +4936,7 @@
       "performance_score": 49,
       "price_gbp": 95,
       "price_perf_ratio": 51.6,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 4.9,
       "base_ghz": 3.9,
       "boost_ghz": 4.4,
@@ -4501,7 +4947,9 @@
       "year": 2021,
       "pcpartpicker_search": "AMD Ryzen 5 5600G",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "AMD Ryzen 9 3950X",
@@ -4521,7 +4969,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 9 3950X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 6800H",
@@ -4530,7 +4980,7 @@
       "performance_score": 47,
       "price_gbp": 140,
       "price_perf_ratio": 33.6,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 4.7,
       "base_ghz": 3.2,
       "boost_ghz": 4.7,
@@ -4541,7 +4991,9 @@
       "year": 2022,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 5500",
@@ -4550,7 +5002,7 @@
       "performance_score": 47,
       "price_gbp": 69,
       "price_perf_ratio": 68.1,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "tier": 4.7,
       "base_ghz": 3.6,
       "boost_ghz": 4.2,
@@ -4561,7 +5013,9 @@
       "year": 2022,
       "pcpartpicker_search": "AMD Ryzen 5 5500",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Intel Core i5-11500",
@@ -4581,7 +5035,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i5-11500",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-12450H",
@@ -4590,7 +5046,7 @@
       "performance_score": 47,
       "price_gbp": 95,
       "price_perf_ratio": 49.5,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 4.7,
       "base_ghz": 2.0,
       "boost_ghz": 4.4,
@@ -4601,7 +5057,9 @@
       "year": 2022,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-10700",
@@ -4610,7 +5068,7 @@
       "performance_score": 46,
       "price_gbp": 100,
       "price_perf_ratio": 46.0,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.6,
       "base_ghz": 2.9,
       "boost_ghz": 4.8,
@@ -4621,7 +5079,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i7-10700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-11400F",
@@ -4641,7 +5101,9 @@
       "year": 2021,
       "pcpartpicker_search": "Intel Core i5-11400F",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-10600K",
@@ -4661,7 +5123,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i5-10600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i9-9900KS",
@@ -4670,7 +5134,7 @@
       "performance_score": 45.3,
       "price_gbp": 109,
       "price_perf_ratio": 41.6,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.5,
       "base_ghz": 4,
       "boost_ghz": 5,
@@ -4681,7 +5145,9 @@
       "year": 2019,
       "pcpartpicker_search": "Intel Core i9-9900KS",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 9 3900X",
@@ -4701,7 +5167,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 9 3900X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i9-9900K",
@@ -4710,7 +5178,7 @@
       "performance_score": 44,
       "price_gbp": 110,
       "price_perf_ratio": 40.0,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.4,
       "base_ghz": 3.6,
       "boost_ghz": 5.0,
@@ -4721,7 +5189,9 @@
       "year": 2018,
       "pcpartpicker_search": "Intel Core i9-9900K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 3800XT",
@@ -4741,7 +5211,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 7 3800XT",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-11800H",
@@ -4750,7 +5222,7 @@
       "performance_score": 42,
       "price_gbp": 110,
       "price_perf_ratio": 38.2,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "tier": 4.2,
       "base_ghz": 2.3,
       "boost_ghz": 4.6,
@@ -4761,7 +5233,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 3800X",
@@ -4770,7 +5244,7 @@
       "performance_score": 41,
       "price_gbp": 85,
       "price_perf_ratio": 48.2,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.1,
       "base_ghz": 3.9,
       "boost_ghz": 4.5,
@@ -4781,7 +5255,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 7 3800X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-9700K",
@@ -4790,7 +5266,7 @@
       "performance_score": 41,
       "price_gbp": 95,
       "price_perf_ratio": 43.2,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.1,
       "base_ghz": 3.6,
       "boost_ghz": 4.9,
@@ -4801,7 +5277,9 @@
       "year": 2018,
       "pcpartpicker_search": "Intel Core i7-9700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 3700X",
@@ -4810,7 +5288,7 @@
       "performance_score": 40,
       "price_gbp": 75,
       "price_perf_ratio": 53.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.0,
       "base_ghz": 3.6,
       "boost_ghz": 4.4,
@@ -4821,7 +5299,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 7 3700X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-8700K",
@@ -4830,7 +5310,7 @@
       "performance_score": 40,
       "price_gbp": 85,
       "price_perf_ratio": 47.1,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 4.0,
       "base_ghz": 3.7,
       "boost_ghz": 4.7,
@@ -4841,7 +5321,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i7-8700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-10400F",
@@ -4850,7 +5332,7 @@
       "performance_score": 40,
       "price_gbp": 55,
       "price_perf_ratio": 72.7,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 4.0,
       "base_ghz": 2.9,
       "boost_ghz": 4.3,
@@ -4861,7 +5343,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i5-10400F",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-10400",
@@ -4881,7 +5365,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i5-10400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 3600X",
@@ -4901,7 +5387,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 5 3600X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 5600H",
@@ -4910,7 +5398,7 @@
       "performance_score": 39,
       "price_gbp": 90,
       "price_perf_ratio": 43.3,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 3.9,
       "base_ghz": 3.3,
       "boost_ghz": 4.2,
@@ -4921,7 +5409,9 @@
       "year": 2021,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-9700",
@@ -4930,7 +5420,7 @@
       "performance_score": 39,
       "price_gbp": 85,
       "price_perf_ratio": 45.9,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.9,
       "base_ghz": 3.0,
       "boost_ghz": 4.7,
@@ -4941,7 +5431,9 @@
       "year": 2019,
       "pcpartpicker_search": "Intel Core i7-9700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 3600",
@@ -4950,7 +5442,7 @@
       "performance_score": 38,
       "price_gbp": 50,
       "price_perf_ratio": 76.0,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.8,
       "base_ghz": 3.6,
       "boost_ghz": 4.2,
@@ -4961,7 +5453,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 5 3600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-8700",
@@ -4970,7 +5464,7 @@
       "performance_score": 38,
       "price_gbp": 75,
       "price_perf_ratio": 50.7,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.8,
       "base_ghz": 3.2,
       "boost_ghz": 4.6,
@@ -4981,7 +5475,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i7-8700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 3 5300G",
@@ -4990,7 +5486,7 @@
       "performance_score": 37.4,
       "price_gbp": 89,
       "price_perf_ratio": 42.0,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.7,
       "base_ghz": 4,
       "boost_ghz": 4.2,
@@ -5001,7 +5497,9 @@
       "year": 2021,
       "pcpartpicker_search": "AMD Ryzen 3 5300G",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 3 3300X",
@@ -5021,7 +5519,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 3 3300X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-9600K",
@@ -5041,7 +5541,9 @@
       "year": 2018,
       "pcpartpicker_search": "Intel Core i5-9600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i3-10100F",
@@ -5050,7 +5552,7 @@
       "performance_score": 36.7,
       "price_gbp": 49,
       "price_perf_ratio": 74.9,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.7,
       "base_ghz": 3.6,
       "boost_ghz": 4.3,
@@ -5061,7 +5563,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i3-10100F",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-7700K",
@@ -5070,7 +5574,7 @@
       "performance_score": 35,
       "price_gbp": 70,
       "price_perf_ratio": 50.0,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.5,
       "base_ghz": 4.2,
       "boost_ghz": 4.5,
@@ -5081,7 +5585,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i7-7700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 3500X",
@@ -5101,7 +5607,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 5 3500X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-8600K",
@@ -5121,7 +5629,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i5-8600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-1135G7",
@@ -5130,7 +5640,7 @@
       "performance_score": 34,
       "price_gbp": 65,
       "price_perf_ratio": 52.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 3.4,
       "base_ghz": 2.4,
       "boost_ghz": 4.2,
@@ -5141,7 +5651,9 @@
       "year": 2020,
       "pcpartpicker_search": "Intel Core i5-1135G7",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 2700X",
@@ -5150,7 +5662,7 @@
       "performance_score": 32,
       "price_gbp": 45,
       "price_perf_ratio": 71.1,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.2,
       "base_ghz": 3.7,
       "boost_ghz": 4.3,
@@ -5161,7 +5673,9 @@
       "year": 2018,
       "pcpartpicker_search": "AMD Ryzen 7 2700X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-8500",
@@ -5181,7 +5695,9 @@
       "year": 2018,
       "pcpartpicker_search": "Intel Core i5-8500",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-9400F",
@@ -5190,7 +5706,7 @@
       "performance_score": 32,
       "price_gbp": 45,
       "price_perf_ratio": 71.1,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.2,
       "base_ghz": 2.9,
       "boost_ghz": 4.1,
@@ -5201,7 +5717,9 @@
       "year": 2019,
       "pcpartpicker_search": "Intel Core i5-9400F",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-9400",
@@ -5221,7 +5739,9 @@
       "year": 2019,
       "pcpartpicker_search": "Intel Core i5-9400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-6700K",
@@ -5241,7 +5761,9 @@
       "year": 2015,
       "pcpartpicker_search": "Intel Core i7-6700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-7700",
@@ -5261,7 +5783,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i7-7700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 2600X",
@@ -5281,7 +5805,9 @@
       "year": 2018,
       "pcpartpicker_search": "AMD Ryzen 5 2600X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 4600H",
@@ -5290,7 +5816,7 @@
       "performance_score": 31,
       "price_gbp": 70,
       "price_perf_ratio": 44.3,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 3.1,
       "base_ghz": 3.0,
       "boost_ghz": 4.0,
@@ -5301,7 +5827,9 @@
       "year": 2020,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 3 3100",
@@ -5321,7 +5849,9 @@
       "year": 2020,
       "pcpartpicker_search": "AMD Ryzen 3 3100",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-8400",
@@ -5341,7 +5871,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i5-8400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 3400G",
@@ -5350,7 +5882,7 @@
       "performance_score": 30,
       "price_gbp": 40,
       "price_perf_ratio": 75.0,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 3.0,
       "base_ghz": 3.7,
       "boost_ghz": 4.2,
@@ -5361,7 +5893,9 @@
       "year": 2019,
       "pcpartpicker_search": "AMD Ryzen 5 3400G",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-1065G7",
@@ -5381,7 +5915,9 @@
       "year": 2019,
       "pcpartpicker_search": "Intel Core i7-1065G7",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-6700",
@@ -5401,7 +5937,9 @@
       "year": 2015,
       "pcpartpicker_search": "Intel Core i7-6700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 2600",
@@ -5421,7 +5959,9 @@
       "year": 2018,
       "pcpartpicker_search": "AMD Ryzen 5 2600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-4790K",
@@ -5441,7 +5981,9 @@
       "year": 2014,
       "pcpartpicker_search": "Intel Core i7-4790K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 1600X",
@@ -5461,7 +6003,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 5 1600X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 1700X",
@@ -5470,7 +6014,7 @@
       "performance_score": 28.8,
       "price_gbp": 55,
       "price_perf_ratio": 52.4,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 2.9,
       "base_ghz": 3.4,
       "boost_ghz": 3.8,
@@ -5481,7 +6025,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 7 1700X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 1800X",
@@ -5501,7 +6047,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 7 1800X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-7600K",
@@ -5521,7 +6069,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i5-7600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-5820K",
@@ -5541,7 +6091,9 @@
       "year": 2014,
       "pcpartpicker_search": "Intel Core i7-5820K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 2400G",
@@ -5561,7 +6113,9 @@
       "year": 2018,
       "pcpartpicker_search": "AMD Ryzen 5 2400G",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-4770K",
@@ -5570,7 +6124,7 @@
       "performance_score": 27,
       "price_gbp": 38,
       "price_perf_ratio": 71.1,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.7,
       "base_ghz": 3.5,
       "boost_ghz": 3.9,
@@ -5581,7 +6135,9 @@
       "year": 2013,
       "pcpartpicker_search": "Intel Core i7-4770K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-4770",
@@ -5590,7 +6146,7 @@
       "performance_score": 26,
       "price_gbp": 35,
       "price_perf_ratio": 74.3,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.6,
       "base_ghz": 3.4,
       "boost_ghz": 3.9,
@@ -5601,7 +6157,9 @@
       "year": 2013,
       "pcpartpicker_search": "Intel Core i7-4770",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 7 1700",
@@ -5621,7 +6179,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 7 1700",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 1600",
@@ -5641,7 +6201,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 5 1600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-7500",
@@ -5650,7 +6212,7 @@
       "performance_score": 25,
       "price_gbp": 32,
       "price_perf_ratio": 78.1,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.5,
       "base_ghz": 3.4,
       "boost_ghz": 3.8,
@@ -5661,7 +6223,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i5-7500",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-6600K",
@@ -5670,7 +6234,7 @@
       "performance_score": 25,
       "price_gbp": 32,
       "price_perf_ratio": 78.1,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.5,
       "base_ghz": 3.5,
       "boost_ghz": 3.9,
@@ -5681,7 +6245,9 @@
       "year": 2015,
       "pcpartpicker_search": "Intel Core i5-6600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 3 1300X",
@@ -5701,7 +6267,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 3 1300X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 5 1500X",
@@ -5721,7 +6289,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 5 1500X",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-3770K",
@@ -5730,7 +6300,7 @@
       "performance_score": 24,
       "price_gbp": 32,
       "price_perf_ratio": 75.0,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.4,
       "base_ghz": 3.5,
       "boost_ghz": 3.9,
@@ -5741,7 +6311,9 @@
       "year": 2012,
       "pcpartpicker_search": "Intel Core i7-3770K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-7400",
@@ -5761,7 +6333,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i5-7400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-6500",
@@ -5781,7 +6355,9 @@
       "year": 2015,
       "pcpartpicker_search": "Intel Core i5-6500",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-2700K",
@@ -5790,7 +6366,7 @@
       "performance_score": 21,
       "price_gbp": 28,
       "price_perf_ratio": 75.0,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 2.1,
       "base_ghz": 3.5,
       "boost_ghz": 3.9,
@@ -5801,7 +6377,9 @@
       "year": 2011,
       "pcpartpicker_search": "Intel Core i7-2700K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-4590",
@@ -5821,7 +6399,9 @@
       "year": 2014,
       "pcpartpicker_search": "Intel Core i5-4590",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-4570",
@@ -5841,7 +6421,9 @@
       "year": 2013,
       "pcpartpicker_search": "Intel Core i5-4570",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD Ryzen 3 1200",
@@ -5861,7 +6443,9 @@
       "year": 2017,
       "pcpartpicker_search": "AMD Ryzen 3 1200",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-8250U",
@@ -5870,7 +6454,7 @@
       "performance_score": 20,
       "price_gbp": 40,
       "price_perf_ratio": 50.0,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "tier": 2.0,
       "base_ghz": 1.6,
       "boost_ghz": 3.4,
@@ -5881,7 +6465,9 @@
       "year": 2017,
       "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate - soldered part, not sold separately"
+      "price_note": "Used market estimate - soldered part, not sold separately",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i7-2600K",
@@ -5901,7 +6487,9 @@
       "year": 2011,
       "pcpartpicker_search": "Intel Core i7-2600K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-6400",
@@ -5921,7 +6509,9 @@
       "year": 2015,
       "pcpartpicker_search": "Intel Core i5-6400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-3570K",
@@ -5941,7 +6531,9 @@
       "year": 2012,
       "pcpartpicker_search": "Intel Core i5-3570K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-4460",
@@ -5961,7 +6553,9 @@
       "year": 2014,
       "pcpartpicker_search": "Intel Core i5-4460",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-3470",
@@ -5981,7 +6575,9 @@
       "year": 2012,
       "pcpartpicker_search": "Intel Core i5-3470",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-2500K",
@@ -6001,7 +6597,9 @@
       "year": 2011,
       "pcpartpicker_search": "Intel Core i5-2500K",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i3-7100",
@@ -6010,7 +6608,7 @@
       "performance_score": 15.5,
       "price_gbp": 39,
       "price_perf_ratio": 39.7,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "tier": 1.6,
       "base_ghz": 3.9,
       "boost_ghz": 3.9,
@@ -6021,7 +6619,9 @@
       "year": 2017,
       "pcpartpicker_search": "Intel Core i3-7100",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Intel Core i5-2400",
@@ -6041,7 +6641,9 @@
       "year": 2011,
       "pcpartpicker_search": "Intel Core i5-2400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD FX-8350",
@@ -6061,7 +6663,9 @@
       "year": 2012,
       "pcpartpicker_search": "AMD FX-8350",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD FX-8320",
@@ -6070,7 +6674,7 @@
       "performance_score": 13,
       "price_gbp": 18,
       "price_perf_ratio": 72.2,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 1.3,
       "base_ghz": 3.5,
       "boost_ghz": 4.0,
@@ -6081,7 +6685,9 @@
       "year": 2012,
       "pcpartpicker_search": "AMD FX-8320",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD FX-6300",
@@ -6090,7 +6696,7 @@
       "performance_score": 12,
       "price_gbp": 15,
       "price_perf_ratio": 80.0,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "tier": 1.2,
       "base_ghz": 3.5,
       "boost_ghz": 4.1,
@@ -6101,7 +6707,9 @@
       "year": 2012,
       "pcpartpicker_search": "AMD FX-6300",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "AMD FX-4300",
@@ -6121,7 +6729,9 @@
       "year": 2012,
       "pcpartpicker_search": "AMD FX-4300",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     }
   ],
   "rams": [
@@ -6140,7 +6750,9 @@
       "year": 2024,
       "pcpartpicker_search": "Corsair Dominator Titanium 48GB DDR5-8000",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-7600",
@@ -6157,7 +6769,9 @@
       "year": 2023,
       "pcpartpicker_search": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-7600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-7200",
@@ -6174,7 +6788,9 @@
       "year": 2023,
       "pcpartpicker_search": "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5-7200",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Dominator Titanium 32GB (2x16GB) DDR5-6600",
@@ -6184,14 +6800,16 @@
       "performance_score": 85,
       "price_gbp": 349,
       "price_perf_ratio": 24.4,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "bandwidth_gbs": 105.6,
       "gen": "DDR5",
       "tier": 8.5,
       "year": 2024,
       "pcpartpicker_search": "Corsair Dominator Titanium 32GB (2x16GB) DDR5-6600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Trident Z5 RGB 64GB (2x32GB) DDR5-6400",
@@ -6208,7 +6826,9 @@
       "year": 2024,
       "pcpartpicker_search": "G.Skill Trident Z5 RGB 64GB (2x32GB) DDR5-6400",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Kingston Fury Renegade 32GB (2x16GB) DDR5-6400",
@@ -6218,14 +6838,16 @@
       "performance_score": 82,
       "price_gbp": 319,
       "price_perf_ratio": 25.7,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "bandwidth_gbs": 102.4,
       "gen": "DDR5",
       "tier": 8.2,
       "year": 2023,
       "pcpartpicker_search": "Kingston Fury Renegade 32GB (2x16GB) DDR5-6400",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance 64GB (2x32GB) DDR5-6000",
@@ -6242,7 +6864,9 @@
       "year": 2023,
       "pcpartpicker_search": "Corsair Vengeance 64GB (2x32GB) DDR5-6000",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Trident Z5 Neo RGB 32GB (2x16GB) DDR5-6000",
@@ -6252,14 +6876,16 @@
       "performance_score": 79,
       "price_gbp": 329,
       "price_perf_ratio": 24.0,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "bandwidth_gbs": 96.0,
       "gen": "DDR5",
       "tier": 7.9,
       "year": 2023,
       "pcpartpicker_search": "G.Skill Trident Z5 Neo RGB 32GB (2x16GB) DDR5-6000",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Flare X5 32GB (2x16GB) DDR5-6000",
@@ -6269,14 +6895,16 @@
       "performance_score": 77,
       "price_gbp": 279,
       "price_perf_ratio": 27.6,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "bandwidth_gbs": 96.0,
       "gen": "DDR5",
       "tier": 7.7,
       "year": 2023,
       "pcpartpicker_search": "G.Skill Flare X5 32GB (2x16GB) DDR5-6000",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Kingston Fury Beast 32GB (2x16GB) DDR5-5600",
@@ -6293,7 +6921,9 @@
       "year": 2022,
       "pcpartpicker_search": "Kingston Fury Beast 32GB (2x16GB) DDR5-5600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance 64GB (2x32GB) DDR5-5600",
@@ -6310,7 +6940,9 @@
       "year": 2023,
       "pcpartpicker_search": "Corsair Vengeance 64GB (2x32GB) DDR5-5600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance 16GB (2x8GB) DDR5-5600",
@@ -6327,7 +6959,9 @@
       "year": 2022,
       "pcpartpicker_search": "Corsair Vengeance 16GB (2x8GB) DDR5-5600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Crucial 32GB (2x16GB) SODIMM DDR5-5600 (Laptop)",
@@ -6337,14 +6971,16 @@
       "performance_score": 69,
       "price_gbp": 280,
       "price_perf_ratio": 24.6,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "bandwidth_gbs": 89.6,
       "gen": "DDR5",
       "tier": 6.9,
       "year": 2023,
       "pcpartpicker_search": "Crucial 32GB (2x16GB) SODIMM DDR5-5600",
-      "legacy": false,
-      "price_note": ""
+      "legacy": true,
+      "price_note": "",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Kingston Fury Impact 16GB SODIMM DDR5-5600 (Laptop)",
@@ -6354,14 +6990,16 @@
       "performance_score": 68,
       "price_gbp": 145,
       "price_perf_ratio": 46.9,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "bandwidth_gbs": 44.8,
       "gen": "DDR5",
       "tier": 6.8,
       "year": 2023,
       "pcpartpicker_search": "Kingston Fury Impact 16GB SODIMM DDR5-5600",
-      "legacy": false,
-      "price_note": ""
+      "legacy": true,
+      "price_note": "",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Corsair Vengeance 32GB (2x16GB) DDR5-5200",
@@ -6371,14 +7009,16 @@
       "performance_score": 67,
       "price_gbp": 255,
       "price_perf_ratio": 26.3,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "bandwidth_gbs": 83.2,
       "gen": "DDR5",
       "tier": 6.7,
       "year": 2022,
       "pcpartpicker_search": "Corsair Vengeance 32GB (2x16GB) DDR5-5200",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Kingston Fury Beast 32GB (2x16GB) DDR5-4800",
@@ -6388,14 +7028,16 @@
       "performance_score": 63,
       "price_gbp": 245,
       "price_perf_ratio": 25.7,
-      "pp_label": "Fair",
+      "pp_label": "Good",
       "bandwidth_gbs": 76.8,
       "gen": "DDR5",
       "tier": 6.3,
       "year": 2021,
       "pcpartpicker_search": "Kingston Fury Beast 32GB (2x16GB) DDR5-4800",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance 16GB (2x8GB) DDR5-4800",
@@ -6412,7 +7054,9 @@
       "year": 2021,
       "pcpartpicker_search": "Corsair Vengeance 16GB (2x8GB) DDR5-4800",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Crucial 32GB (2x16GB) SODIMM DDR5-4800 (Laptop)",
@@ -6422,14 +7066,16 @@
       "performance_score": 61,
       "price_gbp": 250,
       "price_perf_ratio": 24.4,
-      "pp_label": "Fair",
+      "pp_label": "n/a",
       "bandwidth_gbs": 76.8,
       "gen": "DDR5",
       "tier": 6.1,
       "year": 2022,
       "pcpartpicker_search": "Crucial 32GB (2x16GB) SODIMM DDR5-4800",
-      "legacy": false,
-      "price_note": ""
+      "legacy": true,
+      "price_note": "",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "G.Skill Trident Z Neo 32GB (2x16GB) DDR4-4000",
@@ -6446,7 +7092,9 @@
       "year": 2020,
       "pcpartpicker_search": "G.Skill Trident Z Neo 32GB (2x16GB) DDR4-4000",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance RGB Pro 32GB (2x16GB) DDR4-3600",
@@ -6463,7 +7111,9 @@
       "year": 2019,
       "pcpartpicker_search": "Corsair Vengeance RGB Pro 32GB (2x16GB) DDR4-3600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Trident Z Neo 16GB (2x8GB) DDR4-3600",
@@ -6473,14 +7123,16 @@
       "performance_score": 46,
       "price_gbp": 69,
       "price_perf_ratio": 66.7,
-      "pp_label": "Good",
+      "pp_label": "Excellent",
       "bandwidth_gbs": 57.6,
       "gen": "DDR4",
       "tier": 4.6,
       "year": 2019,
       "pcpartpicker_search": "G.Skill Trident Z Neo 16GB (2x8GB) DDR4-3600",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance LPX 64GB (2x32GB) DDR4-3200",
@@ -6497,7 +7149,9 @@
       "year": 2020,
       "pcpartpicker_search": "Corsair Vengeance LPX 64GB (2x32GB) DDR4-3200",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "G.Skill Ripjaws V 32GB (2x16GB) DDR4-3200",
@@ -6514,7 +7168,9 @@
       "year": 2019,
       "pcpartpicker_search": "G.Skill Ripjaws V 32GB (2x16GB) DDR4-3200",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4-3200",
@@ -6531,7 +7187,9 @@
       "year": 2019,
       "pcpartpicker_search": "Corsair Vengeance LPX 16GB (2x8GB) DDR4-3200",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Kingston Fury Beast 16GB (2x8GB) DDR4-3200",
@@ -6548,7 +7206,9 @@
       "year": 2021,
       "pcpartpicker_search": "Kingston Fury Beast 16GB (2x8GB) DDR4-3200",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4-3000",
@@ -6558,14 +7218,16 @@
       "performance_score": 38,
       "price_gbp": 72,
       "price_perf_ratio": 52.8,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "bandwidth_gbs": 48.0,
       "gen": "DDR4",
       "tier": 3.8,
       "year": 2017,
       "pcpartpicker_search": "Corsair Vengeance LPX 16GB (2x8GB) DDR4-3000",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 16GB (2x8GB) SODIMM DDR4-3200 (Laptop)",
@@ -6575,14 +7237,16 @@
       "performance_score": 37,
       "price_gbp": 95,
       "price_perf_ratio": 38.9,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "bandwidth_gbs": 51.2,
       "gen": "DDR4",
       "tier": 3.7,
       "year": 2020,
       "pcpartpicker_search": "Crucial 16GB (2x8GB) SODIMM DDR4-3200",
-      "legacy": false,
-      "price_note": ""
+      "legacy": true,
+      "price_note": "",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Kingston HyperX Fury 16GB (2x8GB) DDR4-2933",
@@ -6599,7 +7263,9 @@
       "year": 2019,
       "pcpartpicker_search": "Kingston HyperX Fury 16GB (2x8GB) DDR4-2933",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Corsair Vengeance LPX 32GB (2x16GB) DDR4-2666",
@@ -6609,14 +7275,16 @@
       "performance_score": 36,
       "price_gbp": 115,
       "price_perf_ratio": 31.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "bandwidth_gbs": 42.7,
       "gen": "DDR4",
       "tier": 3.6,
       "year": 2018,
       "pcpartpicker_search": "Corsair Vengeance LPX 32GB (2x16GB) DDR4-2666",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "G.Skill Ripjaws V 16GB (2x8GB) DDR4-2666",
@@ -6633,7 +7301,9 @@
       "year": 2017,
       "pcpartpicker_search": "G.Skill Ripjaws V 16GB (2x8GB) DDR4-2666",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 16GB SODIMM DDR4-2666 (Laptop)",
@@ -6643,14 +7313,16 @@
       "performance_score": 32,
       "price_gbp": 60,
       "price_perf_ratio": 53.3,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "bandwidth_gbs": 21.3,
       "gen": "DDR4",
       "tier": 3.2,
       "year": 2018,
       "pcpartpicker_search": "Crucial 16GB SODIMM DDR4-2666",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4-2400",
@@ -6660,14 +7332,16 @@
       "performance_score": 31,
       "price_gbp": 58,
       "price_perf_ratio": 53.4,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "bandwidth_gbs": 38.4,
       "gen": "DDR4",
       "tier": 3.1,
       "year": 2016,
       "pcpartpicker_search": "Corsair Vengeance LPX 16GB (2x8GB) DDR4-2400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Corsair Vengeance LPX 8GB (2x4GB) DDR4-2400",
@@ -6684,7 +7358,9 @@
       "year": 2016,
       "pcpartpicker_search": "Corsair Vengeance LPX 8GB (2x4GB) DDR4-2400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 16GB SODIMM DDR4-2400 (Laptop)",
@@ -6694,14 +7370,16 @@
       "performance_score": 29,
       "price_gbp": 56,
       "price_perf_ratio": 51.8,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "bandwidth_gbs": 19.2,
       "gen": "DDR4",
       "tier": 2.9,
       "year": 2017,
       "pcpartpicker_search": "Crucial 16GB SODIMM DDR4-2400",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "G.Skill Ripjaws V 16GB (2x8GB) DDR4-2133",
@@ -6711,14 +7389,16 @@
       "performance_score": 28,
       "price_gbp": 55,
       "price_perf_ratio": 50.9,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "bandwidth_gbs": 34.1,
       "gen": "DDR4",
       "tier": 2.8,
       "year": 2015,
       "pcpartpicker_search": "G.Skill Ripjaws V 16GB (2x8GB) DDR4-2133",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "G.Skill Trident X 16GB (2x8GB) DDR3-2133",
@@ -6735,7 +7415,9 @@
       "year": 2014,
       "pcpartpicker_search": "G.Skill Trident X 16GB (2x8GB) DDR3-2133",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 8GB (2x4GB) DDR4-2133",
@@ -6745,14 +7427,16 @@
       "performance_score": 26,
       "price_gbp": 30,
       "price_perf_ratio": 86.7,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "bandwidth_gbs": 34.1,
       "gen": "DDR4",
       "tier": 2.6,
       "year": 2015,
       "pcpartpicker_search": "Crucial 8GB (2x4GB) DDR4-2133",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 8GB SODIMM DDR4-2133 (Laptop)",
@@ -6762,14 +7446,16 @@
       "performance_score": 25,
       "price_gbp": 28,
       "price_perf_ratio": 89.3,
-      "pp_label": "Excellent",
+      "pp_label": "n/a",
       "bandwidth_gbs": 17.1,
       "gen": "DDR4",
       "tier": 2.5,
       "year": 2016,
       "pcpartpicker_search": "Crucial 8GB SODIMM DDR4-2133",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "G.Skill Ripjaws X 16GB (2x8GB) DDR3-1866",
@@ -6786,7 +7472,9 @@
       "year": 2013,
       "pcpartpicker_search": "G.Skill Ripjaws X 16GB (2x8GB) DDR3-1866",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "G.Skill Ripjaws X 32GB (4x8GB) DDR3-1600",
@@ -6803,7 +7491,9 @@
       "year": 2014,
       "pcpartpicker_search": "G.Skill Ripjaws X 32GB (4x8GB) DDR3-1600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial Ballistix Sport 16GB (2x8GB) DDR3-1600",
@@ -6813,14 +7503,16 @@
       "performance_score": 19,
       "price_gbp": 35,
       "price_perf_ratio": 54.3,
-      "pp_label": "Good",
+      "pp_label": "Fair",
       "bandwidth_gbs": 25.6,
       "gen": "DDR3",
       "tier": 1.9,
       "year": 2013,
       "pcpartpicker_search": "Crucial Ballistix Sport 16GB (2x8GB) DDR3-1600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Corsair Vengeance 8GB (2x4GB) DDR3-1600",
@@ -6837,7 +7529,9 @@
       "year": 2012,
       "pcpartpicker_search": "Corsair Vengeance 8GB (2x4GB) DDR3-1600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Kingston HyperX 8GB SODIMM DDR3L-1600 (Laptop)",
@@ -6847,14 +7541,16 @@
       "performance_score": 17,
       "price_gbp": 16,
       "price_perf_ratio": 106.2,
-      "pp_label": "Excellent",
+      "pp_label": "n/a",
       "bandwidth_gbs": 12.8,
       "gen": "DDR3",
       "tier": 1.7,
       "year": 2013,
       "pcpartpicker_search": "Kingston HyperX 8GB SODIMM DDR3L-1600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 16GB (2x8GB) SODIMM DDR3L-1600 (Laptop)",
@@ -6864,14 +7560,16 @@
       "performance_score": 17,
       "price_gbp": 34,
       "price_perf_ratio": 50.0,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "bandwidth_gbs": 25.6,
       "gen": "DDR3",
       "tier": 1.7,
       "year": 2014,
       "pcpartpicker_search": "Crucial 16GB (2x8GB) SODIMM DDR3L-1600",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Kingston ValueRAM 8GB (2x4GB) DDR3-1333",
@@ -6881,14 +7579,16 @@
       "performance_score": 13,
       "price_gbp": 15,
       "price_perf_ratio": 86.7,
-      "pp_label": "Excellent",
+      "pp_label": "Good",
       "bandwidth_gbs": 21.3,
       "gen": "DDR3",
       "tier": 1.3,
       "year": 2011,
       "pcpartpicker_search": "Kingston ValueRAM 8GB (2x4GB) DDR3-1333",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 8GB SODIMM DDR3L-1333 (Laptop)",
@@ -6898,14 +7598,16 @@
       "performance_score": 13,
       "price_gbp": 16,
       "price_perf_ratio": 81.2,
-      "pp_label": "Good",
+      "pp_label": "n/a",
       "bandwidth_gbs": 10.7,
       "gen": "DDR3",
       "tier": 1.3,
       "year": 2012,
       "pcpartpicker_search": "Crucial 8GB SODIMM DDR3L-1333",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "not_sold_separately",
+      "price_is_estimate": true
     },
     {
       "name": "Crucial 4GB DDR3-1333",
@@ -6922,7 +7624,9 @@
       "year": 2010,
       "pcpartpicker_search": "Crucial 4GB DDR3-1333",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate",
+      "availability": "used_only",
+      "price_is_estimate": true
     }
   ],
   "ssds": [
@@ -6944,7 +7648,9 @@
       "use_case": "Best performance",
       "pcpartpicker_search": "Samsung 990 Pro 2TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "WD Black SN850X 2TB",
@@ -6964,7 +7670,9 @@
       "use_case": "Best all-round",
       "pcpartpicker_search": "WD Black SN850X 2TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Crucial T500 2TB",
@@ -6984,7 +7692,9 @@
       "use_case": "Best all-round",
       "pcpartpicker_search": "Crucial T500 2TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Samsung 990 Pro 1TB",
@@ -7004,7 +7714,9 @@
       "use_case": "Best performance",
       "pcpartpicker_search": "Samsung 990 Pro 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "WD Black SN850X 1TB",
@@ -7024,7 +7736,9 @@
       "use_case": "Best all-round",
       "pcpartpicker_search": "WD Black SN850X 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Lexar NM790 2TB",
@@ -7044,7 +7758,9 @@
       "use_case": "Best value",
       "pcpartpicker_search": "Lexar NM790 2TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Samsung 990 EVO 1TB",
@@ -7064,7 +7780,9 @@
       "use_case": "Best value",
       "pcpartpicker_search": "Samsung 990 EVO 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "WD Blue SN580 1TB",
@@ -7084,7 +7802,9 @@
       "use_case": "Best value",
       "pcpartpicker_search": "WD Blue SN580 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Kingston NV3 1TB",
@@ -7104,7 +7824,9 @@
       "use_case": "Budget",
       "pcpartpicker_search": "Kingston NV3 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Crucial P3 Plus 1TB",
@@ -7124,7 +7846,9 @@
       "use_case": "Budget",
       "pcpartpicker_search": "Crucial P3 Plus 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "WD Blue SN580 500GB",
@@ -7144,7 +7868,9 @@
       "use_case": "Budget",
       "pcpartpicker_search": "WD Blue SN580 500GB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Samsung 870 EVO 1TB (SATA)",
@@ -7164,7 +7890,9 @@
       "use_case": "Older PCs (no M.2 slot)",
       "pcpartpicker_search": "Samsung 870 EVO 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Crucial MX500 1TB (SATA)",
@@ -7184,7 +7912,9 @@
       "use_case": "Older PCs (no M.2 slot)",
       "pcpartpicker_search": "Crucial MX500 1TB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Crucial BX500 480GB (SATA)",
@@ -7204,7 +7934,9 @@
       "use_case": "Older PCs (no M.2 slot)",
       "pcpartpicker_search": "Crucial BX500 480GB",
       "legacy": false,
-      "price_note": ""
+      "price_note": "",
+      "availability": "new",
+      "price_is_estimate": false
     },
     {
       "name": "Typical 7200rpm hard drive (for comparison)",
@@ -7217,14 +7949,16 @@
       "performance_score": 4,
       "price_gbp": 39,
       "price_perf_ratio": 10.3,
-      "pp_label": "Fair",
+      "pp_label": "Excellent",
       "tier": 0.4,
       "form_factor": "3.5in HDD",
       "year": 2015,
       "use_case": "What you are probably upgrading from",
       "pcpartpicker_search": "1TB 7200rpm hard drive",
       "legacy": true,
-      "price_note": "Reference entry - not recommended as a system drive"
+      "price_note": "Reference entry - not recommended as a system drive",
+      "availability": "used_only",
+      "price_is_estimate": true
     }
   ]
 }
