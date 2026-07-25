@@ -6126,9 +6126,9 @@
   ],
   "rams": [
     {
-      "name": "Corsair Dominator Titanium 32GB (2x16GB) DDR5-8000",
+      "name": "Corsair Dominator Titanium 48GB (2x24GB) DDR5-8000",
       "speed": "8000 MHz",
-      "capacity": "32GB",
+      "capacity": "48GB",
       "latency": "CL38",
       "performance_score": 99,
       "price_gbp": 519,
@@ -6138,7 +6138,7 @@
       "gen": "DDR5",
       "tier": 9.9,
       "year": 2024,
-      "pcpartpicker_search": "Corsair Dominator Titanium 32GB (2x16GB) DDR5-8000",
+      "pcpartpicker_search": "Corsair Dominator Titanium 48GB DDR5-8000",
       "legacy": false,
       "price_note": ""
     },
