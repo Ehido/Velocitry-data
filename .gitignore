@@ -1,0 +1,6 @@
+# Unrelated build artefacts that live in this folder
+SDL2-2.30.9/
+sdl.tar.gz
+build/
+# Local code-graph output
+graphify-out/

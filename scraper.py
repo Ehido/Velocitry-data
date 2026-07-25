@@ -112,6 +112,33 @@ def extract_price(html: str) -> float | None:
     return min(prices) if prices else None
 
 
+# ── Percentile labelling ─────────────────────────────────────────────────────
+def relabel_all(data: dict) -> None:
+    """Assign pp_label per category by percentile of price/performance ratio.
+
+    Top 25% = Excellent, next 40% = Good, rest = Fair. Percentiles self-calibrate
+    as prices move, unlike fixed cut-offs.
+    """
+    for category, products in data.items():
+        if category.startswith("_") or not isinstance(products, list):
+            continue
+        scored = [p for p in products if p.get("price_gbp") and p.get("performance_score")]
+        for p in scored:
+            p["price_perf_ratio"] = round(p["performance_score"] / p["price_gbp"] * 100, 1)
+        ratios = sorted((p["price_perf_ratio"] for p in scored), reverse=True)
+        if not ratios:
+            continue
+        top = ratios[max(0, int(len(ratios) * 0.25) - 1)]
+        mid = ratios[max(0, int(len(ratios) * 0.65) - 1)]
+        for p in products:
+            r = p.get("price_perf_ratio")
+            if r is None:
+                p["pp_label"] = "n/a"
+            else:
+                p["pp_label"] = "Excellent" if r >= top else "Good" if r >= mid else "Fair"
+        log.info(f"  Relabelled {category}: Excellent >= {top}, Good >= {mid}")
+
+
 # ── Main update function ─────────────────────────────────────────────────────
 def update_prices() -> None:
     # Load current benchmarks.json
@@ -122,6 +149,7 @@ def update_prices() -> None:
     updated_count  = 0
     failed_count   = 0
     unchanged_count = 0
+    skipped_legacy = 0
 
     # Loop through every category (gpus, cpus, rams)
     for category_name, products in data.items():
@@ -136,6 +164,15 @@ def update_prices() -> None:
             name         = product.get("name", "Unknown")
             search_query = product.get("pcpartpicker_search", name)
             old_price    = product.get("price_gbp")
+
+            # Discontinued parts are not sold new in the UK, so PCPartPicker has
+            # no current price for them. Their price_gbp is a used-market estimate
+            # that we maintain by hand - skip them rather than blanking or
+            # mispricing them (and save 4s of politeness delay each).
+            if product.get("legacy"):
+                log.info(f"  – Skipping (legacy, used-market price): {name}")
+                skipped_legacy += 1
+                continue
 
             log.info(f"  Checking: {name}")
 
@@ -170,18 +207,13 @@ def update_prices() -> None:
             if new_price != old_price:
                 product["price_gbp"] = new_price
 
-                # Recalculate price/performance ratio
+                # Recalculate price/performance ratio. Labels are NOT set here -
+                # they are assigned by percentile across the whole category once
+                # all prices are in (see relabel_all below). Fixed cut-offs made
+                # ~97% of parts "Excellent" once cheap used hardware was added.
                 perf = product.get("performance_score", 0)
                 if new_price > 0 and perf > 0:
-                    ratio = round((perf / new_price) * 100, 1)
-                    product["price_perf_ratio"] = ratio
-                    # Update the label
-                    if ratio >= 18:
-                        product["pp_label"] = "Excellent"
-                    elif ratio >= 10:
-                        product["pp_label"] = "Good"
-                    else:
-                        product["pp_label"] = "Fair"
+                    product["price_perf_ratio"] = round((perf / new_price) * 100, 1)
 
                 log.info(f"  ✓ Updated: £{old_price} → £{new_price}")
                 updated_count += 1
@@ -191,6 +223,10 @@ def update_prices() -> None:
 
             # Be polite to PCPartPicker's servers
             time.sleep(REQUEST_DELAY_SECONDS)
+
+    # Re-assign price/performance labels by percentile within each category, so
+    # the labels stay meaningful as prices move.
+    relabel_all(data)
 
     # Update the timestamp
     data["_meta"]["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -203,7 +239,8 @@ def update_prices() -> None:
     log.info(
         f"\nDone! Updated: {updated_count}  |  "
         f"Unchanged: {unchanged_count}  |  "
-        f"Failed: {failed_count}"
+        f"Failed: {failed_count}  |  "
+        f"Skipped (legacy): {skipped_legacy}"
     )
 
 
