@@ -217,9 +217,9 @@
       "bandwidth_gbs": 896.0,
       "dlss": "DLSS 4",
       "year": 2025,
-      "pcpartpicker_search": "RTX 5090 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX 7900 XT",
@@ -337,9 +337,9 @@
       "bandwidth_gbs": 576.0,
       "dlss": "DLSS 3",
       "year": 2023,
-      "pcpartpicker_search": "RTX 4090 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX 7900 GRE",
@@ -417,9 +417,9 @@
       "bandwidth_gbs": 768.0,
       "dlss": "DLSS 4",
       "year": 2025,
-      "pcpartpicker_search": "RTX 5080 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce RTX 3090",
@@ -557,9 +557,9 @@
       "bandwidth_gbs": 432.0,
       "dlss": "DLSS 3",
       "year": 2023,
-      "pcpartpicker_search": "RTX 4080 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX 6800 XT",
@@ -797,9 +797,9 @@
       "bandwidth_gbs": 448.0,
       "dlss": "DLSS 4",
       "year": 2025,
-      "pcpartpicker_search": "RTX 5070 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX 6750 XT",
@@ -837,9 +837,9 @@
       "bandwidth_gbs": 448.0,
       "dlss": "DLSS 2",
       "year": 2021,
-      "pcpartpicker_search": "RTX 3080 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce RTX 4060 Ti 16GB",
@@ -937,9 +937,9 @@
       "bandwidth_gbs": 256.0,
       "dlss": "DLSS 3",
       "year": 2023,
-      "pcpartpicker_search": "RTX 4070 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Arc B580",
@@ -1077,9 +1077,9 @@
       "bandwidth_gbs": 448.0,
       "dlss": "DLSS 2",
       "year": 2021,
-      "pcpartpicker_search": "RTX 3070 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce RTX 5060 Laptop",
@@ -1097,9 +1097,9 @@
       "bandwidth_gbs": 448.0,
       "dlss": "DLSS 4",
       "year": 2025,
-      "pcpartpicker_search": "RTX 5060 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX 7600",
@@ -1377,9 +1377,9 @@
       "bandwidth_gbs": 256.0,
       "dlss": "DLSS 3",
       "year": 2023,
-      "pcpartpicker_search": "RTX 4060 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce RTX 2060 Super",
@@ -1477,9 +1477,9 @@
       "bandwidth_gbs": 336.0,
       "dlss": "DLSS 2",
       "year": 2021,
-      "pcpartpicker_search": "RTX 3060 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce RTX 5050",
@@ -1617,9 +1617,9 @@
       "bandwidth_gbs": 192.0,
       "dlss": "DLSS 3",
       "year": 2023,
-      "pcpartpicker_search": "RTX 4050 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX Vega 64",
@@ -1697,9 +1697,9 @@
       "bandwidth_gbs": 336.0,
       "dlss": "DLSS 2",
       "year": 2019,
-      "pcpartpicker_search": "RTX 2060 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 1660 Super",
@@ -1797,9 +1797,9 @@
       "bandwidth_gbs": 288.0,
       "dlss": "None",
       "year": 2019,
-      "pcpartpicker_search": "GTX 1660 Ti Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon R9 Fury X",
@@ -1917,9 +1917,9 @@
       "bandwidth_gbs": 192.0,
       "dlss": "DLSS 2",
       "year": 2021,
-      "pcpartpicker_search": "RTX 3050 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 980",
@@ -2037,9 +2037,9 @@
       "bandwidth_gbs": 192.2,
       "dlss": "None",
       "year": 2016,
-      "pcpartpicker_search": "GTX 1060 Laptop 6GB",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon R9 390X",
@@ -2317,9 +2317,9 @@
       "bandwidth_gbs": 89.6,
       "dlss": "FSR 3",
       "year": 2023,
-      "pcpartpicker_search": "780M Graphics",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon RX 6400",
@@ -2357,9 +2357,9 @@
       "bandwidth_gbs": 192.0,
       "dlss": "None",
       "year": 2019,
-      "pcpartpicker_search": "GTX 1650 Laptop",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 960 4GB",
@@ -2917,9 +2917,9 @@
       "bandwidth_gbs": 68.3,
       "dlss": "None",
       "year": 2020,
-      "pcpartpicker_search": "Iris Xe Graphics (96 EU)",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 560 Ti",
@@ -2977,9 +2977,9 @@
       "bandwidth_gbs": 38.4,
       "dlss": "FSR 2",
       "year": 2018,
-      "pcpartpicker_search": "Vega 11 Graphics",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 750",
@@ -3097,9 +3097,9 @@
       "bandwidth_gbs": 51.2,
       "dlss": "FSR 2",
       "year": 2019,
-      "pcpartpicker_search": "Vega 8 Graphics",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 460 1GB",
@@ -3157,9 +3157,9 @@
       "bandwidth_gbs": 76.8,
       "dlss": "None",
       "year": 2021,
-      "pcpartpicker_search": "UHD Graphics 770",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Radeon HD 7770",
@@ -3197,9 +3197,9 @@
       "bandwidth_gbs": 51.2,
       "dlss": "None",
       "year": 2021,
-      "pcpartpicker_search": "UHD Graphics 730",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "NVIDIA GeForce GTX 550 Ti",
@@ -3237,9 +3237,9 @@
       "bandwidth_gbs": 41.6,
       "dlss": "None",
       "year": 2017,
-      "pcpartpicker_search": "UHD Graphics 630",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     }
   ],
   "cpus": [
@@ -4039,9 +4039,9 @@
       "multi_score": 29500,
       "single_score": 3700,
       "year": 2024,
-      "pcpartpicker_search": "AMD Ryzen 7 8845HS",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core i5-13400F",
@@ -4099,9 +4099,9 @@
       "multi_score": 29000,
       "single_score": 3650,
       "year": 2023,
-      "pcpartpicker_search": "AMD Ryzen 7 7840HS",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core Ultra 7 155H",
@@ -4139,9 +4139,9 @@
       "multi_score": 23500,
       "single_score": 3600,
       "year": 2023,
-      "pcpartpicker_search": "Intel Core i7-13620H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core i5-12500",
@@ -4259,9 +4259,9 @@
       "multi_score": 24500,
       "single_score": 3450,
       "year": 2022,
-      "pcpartpicker_search": "Intel Core i7-12700H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core i7-11700K",
@@ -4539,9 +4539,9 @@
       "multi_score": 22500,
       "single_score": 3050,
       "year": 2022,
-      "pcpartpicker_search": "AMD Ryzen 7 6800H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Ryzen 5 5500",
@@ -4599,9 +4599,9 @@
       "multi_score": 16500,
       "single_score": 3150,
       "year": 2022,
-      "pcpartpicker_search": "Intel Core i5-12450H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core i7-10700",
@@ -4759,9 +4759,9 @@
       "multi_score": 18500,
       "single_score": 2850,
       "year": 2021,
-      "pcpartpicker_search": "Intel Core i7-11800H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Ryzen 7 3800X",
@@ -4919,9 +4919,9 @@
       "multi_score": 15500,
       "single_score": 2750,
       "year": 2021,
-      "pcpartpicker_search": "AMD Ryzen 5 5600H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core i7-9700",
@@ -5299,9 +5299,9 @@
       "multi_score": 13500,
       "single_score": 2400,
       "year": 2020,
-      "pcpartpicker_search": "AMD Ryzen 5 4600H",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "AMD Ryzen 3 3100",
@@ -5879,9 +5879,9 @@
       "multi_score": 5900,
       "single_score": 1900,
       "year": 2017,
-      "pcpartpicker_search": "Intel Core i5-8250U",
+      "pcpartpicker_search": "",
       "legacy": true,
-      "price_note": "Used market estimate"
+      "price_note": "Used market estimate - soldered part, not sold separately"
     },
     {
       "name": "Intel Core i7-2600K",
