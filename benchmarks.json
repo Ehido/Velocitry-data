@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "last_updated": "2026-07-24",
+    "last_updated": "2026-07-10",
     "source_credits": [
       "TechPowerUp",
       "PassMark",
@@ -10,13 +10,15 @@
       "Intel ARK",
       "AMD Product Specs"
     ],
-    "note": "Specs are sourced from manufacturer datasheets and public benchmark databases. Performance scores are relative and modelled for comparison; FPS figures are modelled estimates, not measurements. Prices for currently-sold parts auto-update daily from PCPartPicker UK; parts marked legacy are discontinued and carry a hand-maintained used-market estimate.",
+    "note": "Specs are sourced from manufacturer datasheets and public benchmark databases. Performance scores are relative and modelled for comparison; FPS figures are modelled estimates, not measurements. PRICES ARE INDICATIVE and were last verified on the prices_verified date - the automated price feed is currently offline, so treat prices as a guide and check the retailer. Parts marked legacy are discontinued and carry a hand-maintained used-market estimate.",
     "counts": {
       "gpus": 161,
       "cpus": 144,
       "rams": 56,
       "ssds": 15
-    }
+    },
+    "prices_verified": "2026-07-10",
+    "price_source_ok": false
   },
   "gpus": [
     {

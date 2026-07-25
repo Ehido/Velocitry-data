@@ -5,6 +5,24 @@ Runs daily via GitHub Actions.
 Fetches the lowest current UK price for each product from PCPartPicker UK,
 then updates benchmarks.json with the new prices.
 
+STATUS 2026-07-25: THE PRICE SOURCE IS OFFLINE.
+PCPartPicker no longer returns results to plain HTTP clients - search pages come
+back with zero results, and category pages render prices client-side via XHR.
+Verified by hand: every daily run for the fortnight to 2026-07-24 changed only
+the file's date stamp, not a single price, while the website advertised
+"updated daily". The run now records prices_verified / price_source_ok honestly
+and refuses to claim freshness it does not have.
+
+Replacing the source (in rough order of preference):
+  1. eBay Browse API - free, ideal for the used-market prices most of this
+     dataset needs, and an affiliate programme exists.
+  2. Amazon Product Advertising API - needs Associates approval (which needs
+     qualifying sales first), but pairs with the affiliate plan.
+  3. Retailer affiliate feeds via Awin (Scan, Overclockers, Ebuyer) - product
+     feeds with prices, licensed rather than scraped.
+  4. Headless browser against PCPartPicker - works technically, but it is
+     deliberate anti-bot evasion and their ToS forbids it. Not recommended.
+
 How it works:
 1. Load benchmarks.json
 2. For each product, search PCPartPicker UK using the 'pcpartpicker_search' field
@@ -64,52 +82,107 @@ def fetch(url: str) -> str | None:
         return None
 
 
-# ── Helper: extract the lowest price from a PCPartPicker search results page ─
-def extract_price(html: str) -> float | None:
+# ── Product matching ─────────────────────────────────────────────────────────
+# A search page lists many products. Taking the cheapest price anywhere on the
+# page silently returns the price of a DIFFERENT product - that is how a 64GB
+# DDR4 kit ended up listed at the price of a 16GB one. Every candidate price
+# must therefore be tied to a result whose title actually matches the query.
+
+# Tokens that carry identity: capacities, speeds, model numbers (anything with a
+# digit), plus a few distinguishing words. Marketing words are ignored.
+_NOISE = {
+    "gb", "tb", "mhz", "cl", "ddr", "ddr3", "ddr4", "ddr5", "kit", "memory", "ram",
+    "ssd", "nvme", "m", "pcie", "gen", "desktop", "graphics", "card", "gpu", "cpu",
+    "processor", "series", "edition", "gaming", "amd", "intel", "nvidia", "geforce",
+    "radeon", "core", "ryzen",
+}
+
+
+def identity_tokens(text: str) -> set:
+    """Tokens that identify a specific product (model numbers, capacities, speeds)."""
+    raw = re.findall(r"[a-z0-9]+", text.lower())
+    tokens = set()
+    for t in raw:
+        if t in _NOISE:
+            continue
+        if any(ch.isdigit() for ch in t):
+            tokens.add(t)
+    # Capacity/speed written as "32 GB" or "6000 MHz" collapses to just the number,
+    # which is already captured above.
+    return tokens
+
+
+def result_matches(title: str, query: str) -> bool:
+    """True if a search-result title plausibly IS the product we searched for.
+
+    Requires every identity token in the query (model numbers, capacity, speed)
+    to appear in the title. Conservative by design: a missed match costs one
+    stale price, a false match publishes a wrong one.
     """
-    Parse PCPartPicker search results HTML and return the lowest price in GBP.
-    Returns None if no price is found.
+    q = identity_tokens(query)
+    if not q:
+        return True                      # nothing distinctive to check against
+    t = identity_tokens(title)
+    return q.issubset(t)
+
+
+def extract_price(html: str, query: str = "") -> float | None:
+    """
+    Parse PCPartPicker search results and return the lowest price in GBP for a
+    result that MATCHES `query`. Returns None if nothing matches - callers keep
+    the previous price rather than publishing a wrong one.
     """
     soup = BeautifulSoup(html, "lxml")
+    candidates = []          # (price, title) for results whose title matches
 
-    # PCPartPicker search results use a 'ul.search-results__list' structure
-    # Each product has a price in a 'span.search-result--block__price' or similar
-    prices = []
-
-    # Try multiple CSS selectors — PCPartPicker occasionally changes their markup
-    selectors = [
-        "span.pricebox--bestPrice",
-        "span.search-result--block__price",
-        "li.search-result--block span[class*='price']",
-        "div.wrap__product--details span[class*='price']",
+    # Each search result is a block containing a title link and a price.
+    result_selectors = [
+        "li.search-result",
+        "li.search-result--block",
+        "div.search-result",
+        "tr.tr__product",
     ]
+    blocks = []
+    for sel in result_selectors:
+        blocks = soup.select(sel)
+        if blocks:
+            break
 
-    for selector in selectors:
-        for el in soup.select(selector):
-            text = el.get_text(strip=True)
-            # Extract numeric price — e.g. "£349.99" or "From £299"
-            match = re.search(r"£([\d,]+\.?\d*)", text)
-            if match:
-                try:
-                    price = float(match.group(1).replace(",", ""))
-                    if 5 < price < 10000:   # Sanity range for PC parts
-                        prices.append(price)
-                except ValueError:
-                    pass
+    for block in blocks:
+        title_el = block.select_one(
+            "p.search-result__title, a.search-result__link, div.search-result__title, "
+            "td.td__name, a[href*='/product/']"
+        )
+        title = title_el.get_text(" ", strip=True) if title_el else ""
+        if not title:
+            continue
+        block_text = block.get_text(" ", strip=True)
+        for m in re.finditer(r"£([\d,]+\.?\d*)", block_text):
+            try:
+                price = float(m.group(1).replace(",", ""))
+            except ValueError:
+                continue
+            if not (5 < price < 10000):
+                continue
+            if query and not result_matches(title, query):
+                continue
+            candidates.append((price, title))
 
-    # Also try a broader search for any £ price on the page as a fallback
-    if not prices:
-        for el in soup.find_all(string=re.compile(r"£\d+")):
-            match = re.search(r"£([\d,]+\.?\d*)", str(el))
-            if match:
-                try:
-                    price = float(match.group(1).replace(",", ""))
-                    if 5 < price < 10000:
-                        prices.append(price)
-                except ValueError:
-                    pass
+    if candidates:
+        price, title = min(candidates, key=lambda c: c[0])
+        log.info(f"    matched: {title[:70]} -> £{price}")
+        return price
 
-    return min(prices) if prices else None
+    if blocks:
+        # We could read the page but nothing matched the query - report it rather
+        # than falling back to an unrelated price.
+        log.warning("    no result on the page matched the product name")
+        return None
+
+    # Markup changed (no recognisable result blocks). Do not guess a price from
+    # loose text: that is precisely the failure mode this function exists to stop.
+    log.warning("    could not parse search results (markup may have changed)")
+    return None
 
 
 # ── Percentile labelling ─────────────────────────────────────────────────────
@@ -186,7 +259,7 @@ def update_prices() -> None:
                 time.sleep(REQUEST_DELAY_SECONDS)
                 continue
 
-            new_price = extract_price(html)
+            new_price = extract_price(html, search_query)
 
             if new_price is None:
                 log.warning(f"  ✗ No price found for {name}")
@@ -228,8 +301,26 @@ def update_prices() -> None:
     # the labels stay meaningful as prices move.
     relabel_all(data)
 
-    # Update the timestamp
-    data["_meta"]["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # Honesty about freshness. The old behaviour stamped today's date on the file
+    # even when every single lookup failed, so the site advertised "updated
+    # today" over prices that had not moved in weeks. Only record a verification
+    # date when prices were actually confirmed against the source.
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    meta = data["_meta"]
+    meta["last_run"] = today
+    if updated_count or unchanged_count:
+        meta["prices_verified"] = today
+        meta["price_source_ok"] = True
+    else:
+        meta["price_source_ok"] = False
+        log.error(
+            "PRICE SOURCE FAILED: %d lookups, none returned a usable price. "
+            "Prices in this file are NOT current - leaving prices_verified at %s.",
+            failed_count, meta.get("prices_verified", "never"),
+        )
+    # 'last_updated' is what the website shows; it must mean "prices verified",
+    # not "a script ran".
+    meta["last_updated"] = meta.get("prices_verified", meta.get("last_updated"))
 
     # Save back to disk
     log.info(f"\nSaving {BENCHMARKS_FILE}")
