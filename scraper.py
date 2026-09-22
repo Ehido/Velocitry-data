@@ -33,12 +33,15 @@ How it works:
 """
 
 import json
+import sys
 import time
 import re
 import logging
 from datetime import datetime, timezone
 
 import requests
+
+import ebay_prices
 from bs4 import BeautifulSoup
 
 # ── Setup logging so we can see what's happening in GitHub Actions logs ──────
@@ -50,7 +53,6 @@ log = logging.getLogger(__name__)
 
 # ── Constants ────────────────────────────────────────────────────────────────
 BENCHMARKS_FILE = "benchmarks.json"
-PCPP_SEARCH_URL  = "https://uk.pcpartpicker.com/search/?q={query}"
 
 # Pretend to be a regular browser — PCPartPicker blocks plain Python requests
 HEADERS = {
@@ -64,7 +66,7 @@ HEADERS = {
 }
 
 # Wait between requests so we don't hammer PCPartPicker
-REQUEST_DELAY_SECONDS = 4
+REQUEST_DELAY_SECONDS = 0.3
 
 # If a price moves by more than this percentage, flag it in the logs as unusual
 SANITY_CHECK_PCT = 40
@@ -246,11 +248,18 @@ def relabel_all(data: dict) -> None:
 
 
 # ── Main update function ─────────────────────────────────────────────────────
-def update_prices() -> None:
+def update_prices() -> bool:
     # Load current benchmarks.json
     log.info(f"Loading {BENCHMARKS_FILE}")
     with open(BENCHMARKS_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
+
+    token = ebay_prices.get_token()
+    if not token:
+        log.error(
+            "No eBay credentials. Set EBAY_APP_ID and EBAY_CERT_ID (repository "
+            "secrets in CI) or no price can be verified."
+        )
 
     updated_count  = 0
     failed_count   = 0
@@ -268,34 +277,29 @@ def update_prices() -> None:
 
         for product in products:
             name         = product.get("name", "Unknown")
-            search_query = product.get("pcpartpicker_search", name)
+            search_query = product.get("ebay_search") or product.get("pcpartpicker_search", name)
             old_price    = product.get("price_gbp")
+            availability = product.get("availability", "used_only")
 
-            # Discontinued parts are not sold new in the UK, so PCPartPicker has
-            # no current price for them. Their price_gbp is a used-market estimate
-            # that we maintain by hand - skip them rather than blanking or
-            # mispricing them (and save 4s of politeness delay each).
-            if product.get("legacy"):
-                log.info(f"  – Skipping (legacy, used-market price): {name}")
+            # Laptop and integrated silicon is not sold as a part. eBay does list
+            # pulled chips, but a price for one is not a price a buyer could act
+            # on, so these keep their estimate and their "n/a" value label.
+            if availability == "not_sold_separately":
+                log.info(f"  – Skipping (not sold separately): {name}")
                 skipped_legacy += 1
                 continue
 
-            log.info(f"  Checking: {name}")
+            # Discontinued parts are priced from the used market rather than
+            # skipped. That is the whole reason for moving to eBay: 123 of the
+            # 161 graphics cards here are no longer sold new, and the old source
+            # could only ever price the handful that were.
+            condition = "new" if availability == "new" else "used"
 
-            # Build the search URL — replace spaces with + for URL encoding
-            url = PCPP_SEARCH_URL.format(query=search_query.replace(" ", "+"))
+            log.info(f"  Checking ({condition}): {name}")
 
-            html = fetch(url)
-            if not html:
-                log.warning(f"  ✗ Skipping {name} — fetch failed")
-                failed_count += 1
-                time.sleep(REQUEST_DELAY_SECONDS)
-                continue
-
-            new_price = extract_price(html, search_query)
+            new_price = ebay_prices.lookup(search_query, condition, result_matches, token)
 
             if new_price is None:
-                log.warning(f"  ✗ No price found for {name}")
                 failed_count += 1
                 time.sleep(REQUEST_DELAY_SECONDS)
                 continue
@@ -308,6 +312,8 @@ def update_prices() -> None:
                         f"  ⚠ Large price change for {name}: "
                         f"£{old_price} → £{new_price} ({change_pct:.1f}%)"
                     )
+
+            product["price_is_estimate"] = False
 
             # Update only if price changed
             if new_price != old_price:
@@ -327,7 +333,7 @@ def update_prices() -> None:
                 log.info(f"  – No change: £{new_price}")
                 unchanged_count += 1
 
-            # Be polite to PCPartPicker's servers
+            # Stay well inside the free Browse allowance of 5,000 calls a day
             time.sleep(REQUEST_DELAY_SECONDS)
 
     # Re-assign price/performance labels by percentile within each category, so
@@ -379,8 +385,11 @@ def update_prices() -> None:
         f"Failed: {failed_count}  |  "
         f"Skipped (legacy): {skipped_legacy}"
     )
+    return verified_anything
 
 
 # ── Entry point ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    update_prices()
+    # Exit non-zero when nothing could be verified. Returning 0 on total source
+    # failure is what let the price feed sit dead for 74 days behind a green tick.
+    sys.exit(0 if update_prices() else 1)
