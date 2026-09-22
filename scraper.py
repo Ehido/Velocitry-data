@@ -392,4 +392,13 @@ def update_prices() -> bool:
 if __name__ == "__main__":
     # Exit non-zero when nothing could be verified. Returning 0 on total source
     # failure is what let the price feed sit dead for 74 days behind a green tick.
-    sys.exit(0 if update_prices() else 1)
+    #
+    # "Not configured yet" is a different state from "broken", and they must not
+    # look the same. With no credentials at all the run is a no-op by design, so
+    # it exits 0; a daily red tick for a setup step nobody has done yet is how
+    # people learn to ignore red ticks. Once credentials exist, any run that
+    # verifies nothing is a genuine failure and fails loudly.
+    verified = update_prices()
+    if not verified and ebay_prices.available():
+        sys.exit(1)
+    sys.exit(0)
