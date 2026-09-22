@@ -185,19 +185,52 @@ def extract_price(html: str, query: str = "") -> float | None:
     return None
 
 
+RATIO_SPEC = {
+    "gpus": ("avg_fps_1080p", 100),
+    "cpus": ("avg_fps", 100),
+    "rams": ("performance_score", 10),
+    "ssds": ("performance_score", 100),
+}
+
+
+def value_ratio(category: str, product: dict):
+    """Value metric for one product, matching the column label on velocitry.app.
+
+    GPU and CPU columns are labelled "FPS per £100" and must therefore be
+    computed from frames per second, not from performance_score. RAM is
+    labelled "Score per £10". Computing every category from performance_score
+    made the GPU and CPU columns show a figure roughly 2.1x smaller than the
+    FPS-per-£100 they claimed to be.
+    """
+    key, scale = RATIO_SPEC.get(category, ("performance_score", 100))
+    numerator = product.get(key)
+    price = product.get("price_gbp")
+    if not numerator or not price:
+        return None
+    return round(numerator / price * scale, 1)
+
+
 # ── Percentile labelling ─────────────────────────────────────────────────────
 def relabel_all(data: dict) -> None:
     """Assign pp_label per category by percentile of price/performance ratio.
 
     Top 25% = Excellent, next 40% = Good, rest = Fair. Percentiles self-calibrate
-    as prices move, unlike fixed cut-offs.
+    as prices move, unlike fixed cut-offs. Parts that are not sold separately
+    (laptop and integrated silicon) keep a label of "n/a" and are excluded from
+    the percentile bands, since a value rating for something nobody can buy on
+    its own is meaningless and skews the thresholds for parts that can.
     """
     for category, products in data.items():
         if category.startswith("_") or not isinstance(products, list):
             continue
-        scored = [p for p in products if p.get("price_gbp") and p.get("performance_score")]
-        for p in scored:
-            p["price_perf_ratio"] = round(p["performance_score"] / p["price_gbp"] * 100, 1)
+        scored = []
+        for p in products:
+            ratio = value_ratio(category, p)
+            if ratio is None:
+                continue
+            p["price_perf_ratio"] = ratio
+            if p.get("availability") != "not_sold_separately":
+                scored.append(p)
         ratios = sorted((p["price_perf_ratio"] for p in scored), reverse=True)
         if not ratios:
             continue
@@ -205,7 +238,7 @@ def relabel_all(data: dict) -> None:
         mid = ratios[max(0, int(len(ratios) * 0.65) - 1)]
         for p in products:
             r = p.get("price_perf_ratio")
-            if r is None:
+            if r is None or p.get("availability") == "not_sold_separately":
                 p["pp_label"] = "n/a"
             else:
                 p["pp_label"] = "Excellent" if r >= top else "Good" if r >= mid else "Fair"
@@ -284,9 +317,9 @@ def update_prices() -> None:
                 # they are assigned by percentile across the whole category once
                 # all prices are in (see relabel_all below). Fixed cut-offs made
                 # ~97% of parts "Excellent" once cheap used hardware was added.
-                perf = product.get("performance_score", 0)
-                if new_price > 0 and perf > 0:
-                    product["price_perf_ratio"] = round((perf / new_price) * 100, 1)
+                ratio = value_ratio(category_name, product)
+                if ratio is not None:
+                    product["price_perf_ratio"] = ratio
 
                 log.info(f"  ✓ Updated: £{old_price} → £{new_price}")
                 updated_count += 1
