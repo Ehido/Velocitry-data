@@ -187,6 +187,8 @@ def extract_price(html: str, query: str = "") -> float | None:
     return None
 
 
+MIN_GROUP_FOR_BANDS = 8
+
 RATIO_SPEC = {
     "gpus": ("avg_fps_1080p", 100),
     "cpus": ("avg_fps", 100),
@@ -221,6 +223,13 @@ def relabel_all(data: dict) -> None:
     (laptop and integrated silicon) keep a label of "n/a" and are excluded from
     the percentile bands, since a value rating for something nobody can buy on
     its own is meaningless and skews the thresholds for parts that can.
+
+    Bands are computed within an availability group rather than across the whole
+    category. Ten-year-old used cards have enormous frames-per-pound and were
+    setting the bar for everything, so the best card you could actually buy new
+    read "Fair". "Excellent" now means excellent for the market you are shopping
+    in. Groups smaller than MIN_GROUP_FOR_BANDS fall back to the category bands,
+    because a percentile over four items is noise.
     """
     for category, products in data.items():
         if category.startswith("_") or not isinstance(products, list):
@@ -233,18 +242,38 @@ def relabel_all(data: dict) -> None:
             p["price_perf_ratio"] = ratio
             if p.get("availability") != "not_sold_separately":
                 scored.append(p)
+
+        groups = {}
+        for p in scored:
+            groups.setdefault(p.get("availability", "used_only"), []).append(p)
         ratios = sorted((p["price_perf_ratio"] for p in scored), reverse=True)
         if not ratios:
             continue
-        top = ratios[max(0, int(len(ratios) * 0.25) - 1)]
-        mid = ratios[max(0, int(len(ratios) * 0.65) - 1)]
+
+        def bands(values):
+            ordered = sorted(values, reverse=True)
+            return (ordered[max(0, int(len(ordered) * 0.25) - 1)],
+                    ordered[max(0, int(len(ordered) * 0.65) - 1)])
+
+        overall = bands(ratios)
+        per_group = {
+            avail: bands([p["price_perf_ratio"] for p in items])
+            for avail, items in groups.items()
+            if len(items) >= MIN_GROUP_FOR_BANDS
+        }
+
         for p in products:
             r = p.get("price_perf_ratio")
             if r is None or p.get("availability") == "not_sold_separately":
                 p["pp_label"] = "n/a"
-            else:
-                p["pp_label"] = "Excellent" if r >= top else "Good" if r >= mid else "Fair"
-        log.info(f"  Relabelled {category}: Excellent >= {top}, Good >= {mid}")
+                continue
+            top, mid = per_group.get(p.get("availability", "used_only"), overall)
+            p["pp_label"] = "Excellent" if r >= top else "Good" if r >= mid else "Fair"
+
+        for avail, (top, mid) in sorted(per_group.items()):
+            log.info(f"  Relabelled {category} [{avail}]: Excellent >= {top}, Good >= {mid}")
+        if not per_group:
+            log.info(f"  Relabelled {category}: Excellent >= {overall[0]}, Good >= {overall[1]}")
 
 
 # ── Main update function ─────────────────────────────────────────────────────
